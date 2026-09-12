@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html><head><!-- frame-runtime --><script>window.__FRAME_PREAMBLE={"v":1,"capabilities":{"artifact":"artifact.Z2x4WzWL.js","assets":"assets.B-TeBG35.js","comments":"comments.bcDtmHz-.js","db":"db.CZqN5n8-.js","downloads":"downloads.By20cRKz.js","embed":"embed.swQslL0W.js","endpoints":"endpoints.LitwTvTv.js","mcp":"mcp.DNIsJHuR.js","network":"network.B5UA9Su4.js","permissions":"permissions.BQy3BjmI.js","room":"room.DZE7zT7V.js","sample":"sample.BEk0MOOy.js","self":"artifact.Z2x4WzWL.js","user":"user.DLeycE5q.js"},"transforms":"_transforms.CNapGGha.js","comments":"_comments.CoT-GWno.js","translate":"_translate.DqxC5ek1.js","ldx":"_ldx.CMCg6PeI.js"}                                                                                                                                                                                                                                                                                             </script><script>(function(){"use strict";var dn=3e5;function Ut(t,e){try{const n=t("navigation")[0],o=[n.responseStart,n.redirectEnd-n.redirectStart,n.domContentLoadedEventStart,e()];for(let a=0;a<o.length;a++){if(!(o[a]>=0&&o[a]<=3e5))return;o[a]=o[a]|0}return o}catch{return}}var zt=["light","dark","system"],Kt=/^[A-Za-z0-9_-]{1,64}$/,ut=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,$t=new Set(["class","hidden","value","checked","style","title","alt","placeholder","lang","dir","role","tabindex","disabled","readonly","contenteditable","open","colspan","rowspan"]);function Wt(t){const e=t.toLowerCase();return e.startsWith("data-")||e.startsWith("aria-")||$t.has(e)}var ft="data-ldx-props";function Vt(t,e){if(e.toLowerCase()===ft)return!0;const n=t.getAttribute(ft);if(n===null)return!1;try{const o=JSON.parse(n);if(o===null||typeof o!="object"||Array.isArray(o))return!0;const a=e.toLowerCase();return Object.keys(o).some(l=>l.toLowerCase()===a)}catch{return!0}}var hn="http://www.w3.org/1999/xhtml",Xt="http://www.w3.org/2000/svg",Gt=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),Yt=new Set(["script","style"]);function Jt(t){const e=t.localName.toLowerCase();return t.namespaceURI==="http://www.w3.org/1999/xhtml"?!Gt.has(e):t.namespaceURI===Xt?!Yt.has(e):!1}function qe(t,e){return t===e||(t===160||t===32)&&(e===160||e===32)}function Zt(t,e){const n=t.length,o=e.length;let a=0;for(;a<n&&a<o&&qe(t.charCodeAt(a),e.charCodeAt(a));)a++;let l=0;for(;l<n-a&&l<o-a&&qe(t.charCodeAt(n-1-l),e.charCodeAt(o-1-l));)l++;return{p:a,s:l}}function Qt(t,e){const n=t.firstChild;if(t.childNodes.length!==1||n===null||n.nodeType!==Node.TEXT_NODE){t.textContent=e;return}const o=n.data,a=o.length,l=e.length,{p:i,s:f}=Zt(o,e);i===a&&f===0&&a===l||n.replaceData(i,a-i-f,e.slice(i,l-f));const T=n.data,w=t.ownerDocument.getSelection?.()??null,O=w!==null&&w.rangeCount>0&&(w.anchorNode===n||w.focusNode===n)?{anchor:w.anchorNode,anchorOffset:w.anchorOffset,focus:w.focusNode,focusOffset:w.focusOffset}:null;let _=-1,R=-1;for(let h=0;h<T.length&&h<e.length;h++){const M=T.charCodeAt(h),K=e.charCodeAt(h);M!==K&&qe(M,K)&&(_<0&&(_=h),R=h)}const m=_>=0;if(m&&n.replaceData(_,R-_+1,e.slice(_,R+1)),m&&O!==null&&O.anchor!==null&&O.focus!==null)try{w.setBaseAndExtent(O.anchor,O.anchorOffset,O.focus,O.focusOffset)}catch{}}var er=new Set(["html","head","body","frameset"]);function tr(t){return t.namespaceURI==="http://www.w3.org/1999/xhtml"&&er.has(t.localName)}function rr(t){if(t===null||typeof t!="object")return!1;const e=t;if(typeof e.target!="string"||!Kt.test(e.target)||e.text!==void 0&&typeof e.text!="string")return!1;if(e.attrsSet!==void 0){if(e.attrsSet===null||typeof e.attrsSet!="object")return!1;for(const[n,o]of Object.entries(e.attrsSet))if(!ut.test(n)||typeof o!="string")return!1}if(e.attrsRemoved!==void 0){if(!Array.isArray(e.attrsRemoved))return!1;for(const n of e.attrsRemoved)if(typeof n!="string"||!ut.test(n))return!1}return!0}function nr(t,e){if(t===null||typeof t!="object")return!1;const{seq:n,elements:o}=t;if(typeof n!="number"||!Number.isSafeInteger(n)||!Array.isArray(o)||o.length===0||o.length>64)return!1;for(let a=0;a<o.length;a++)if(!e(o[a]))return!1;return!0}function or(t){return t===null||typeof t!="object"?!1:nr(t.__frame_patch,rr)}function ar(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_init;return e!==null&&typeof e=="object"}function lr(t){return t!==null&&typeof t=="object"&&t.__frame_size_poke===!0}function sr(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_host_visible;return e!==null&&typeof e=="object"&&typeof e.visible=="boolean"}function ir(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_theme;if(e===null||typeof e!="object")return!1;const n=e.theme;return typeof n=="string"&&zt.includes(n)}var cr=["ok","empty","snapshot_error","snapshot_timeout","unclonable","oversize","unavailable","restore_error","withheld"],ur=["TypeError","RangeError","ReferenceError","SyntaxError","DataCloneError","QuotaExceededError","AbortError","TimeoutError","SecurityError","Error","other"];function fr(t){return typeof t=="string"&&ur.includes(t)?t:"other"}var dr=Object.freeze({until:null,now:!1}),hr="__claude_hot",pr="__claude_hot_in",mr=/^__claude_hot(?:_in)?(?::|$)/,dt=/^[0-9a-z]{1,32}$/,Be=t=>t===void 0?hr:"__claude_hot:"+t,de=t=>t===void 0?pr:"__claude_hot_in:"+t;function _r(t,e){const n=[];for(let o=0;o<t.length;o++){const a=t.key(o);a!==null&&a!==e&&mr.test(a)&&n.push(a)}for(const o of n)t.removeItem(o)}function vr(t){let e=null;try{e=z(JSON.parse(t)?.hot)}catch{return null}return e===null||typeof e.k!="string"||!dt.test(e.k)?null:he(e.g)?{k:e.k,g:e.g}:{k:e.k}}var pn=262144,yr=3e3,ht=/^[a-z0-9._:-]{1,64}$/,gr=["none","hot-restart","hard-reload"],wr=["asset","doc","added","removed"],br=1500,Er=/^[0-9a-f]{64}$/;function z(t){return t!==null&&typeof t=="object"?t:null}function he(t){return typeof t=="number"&&Number.isInteger(t)&&t>=0&&t<2**31}function pt(t){return t===void 0||typeof t=="number"&&Number.isFinite(t)}function Sr(t){return t===void 0||typeof t=="string"&&ht.test(t)}function mt(t){const e=z(t);return e!==null&&(e.until===null||typeof e.until=="number"&&Number.isFinite(e.until))&&typeof e.now=="boolean"}function Ue(t){const e=z(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&pt(e.seq)&&typeof e.handoff=="string"&&cr.includes(e.handoff)&&Sr(e.note)}function Ar(t){const e=z(t);return e!==null&&he(e.gen)&&(e.phase==="final"||e.phase==="pending")&&(e.from===null||Ue(e.from))}function kr(t){const e=z(t);return e!==null&&e.kv===1&&he(e.gen)&&Ue(e.from)&&Object.hasOwn(e,"data")}function Rr(t){const e=z(t);return e!==null&&e.__frame_hot_snapshot===!0&&he(e.gen)&&typeof e.timeoutMs=="number"&&e.timeoutMs>=0&&e.timeoutMs<=6e4&&(e.handoff===void 0||typeof e.handoff=="boolean")&&(e.deadline===void 0||mt(e.deadline))&&pt(e.seq)&&(e.note===void 0||typeof e.note=="string")&&(e.key===void 0||typeof e.key=="string")}function Tr(t){const e=z(t);return e!==null&&e.__frame_hot_start===!0&&he(e.gen)&&Ue(e.from)}function _t(t){const e=z(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&Number.isFinite(e.seq)}function vt(t){if(t==null||typeof t=="string")return!0;const e=z(t);return e!==null&&typeof e.doc=="string"&&typeof e.profile=="string"}function Or(t){const e=z(t);return e!==null&&typeof e.path=="string"&&wr.includes(e.kind)&&vt(e.from)&&vt(e.to)}function Lr(t){return t===null?null:Object.freeze(t.filter(Or))}function Pr(t){const e=z(t);return e!==null&&e.__frame_hot_update===!0&&Number.isFinite(e.id)&&_t(e.from)&&_t(e.to)&&(e.changed===null||Array.isArray(e.changed))&&gr.includes(e.required)&&mt(e.deadline)&&typeof e.verdictTimeoutMs=="number"&&e.verdictTimeoutMs>=0&&e.verdictTimeoutMs<=6e4&&(e.preflight===void 0||typeof e.preflight=="string"&&Er.test(e.preflight))}var oe=/^[\w.-]+\.js$/;function Mr(t,e,n){return n?"inert":typeof e=="string"&&oe.test(e)?t?[e]:"inert":t?"inert":"framed"}var yt=Object.freeze({[Symbol("claude.hot.restart")]:!0});function gt(t,e){let n;try{n=t??sessionStorage}catch{return null}const o=Be(e?.k),a=de(e?.k);let l=null;try{l=n.getItem(o)}catch{}try{n.removeItem(o)}catch{}try{_r(n,a)}catch{}let i=null;if(l!==null&&!(e!==null&&e.g===void 0))try{const f=JSON.parse(l);kr(f)&&(e===null||f.gen===e.g)&&(i=f)}catch{}if(i===null)try{n.removeItem(a)}catch{}return i}function Nr(){const t=/^\/_f\/([^/]{1,128})\//.exec(location.pathname);return t?t[1]:""}var Cr=/^[^/\\?#]{1,128}$/,wt=t=>Cr.test(t)&&t!=="."&&t!=="..";function bt(t,e,n){const o=new URL(t),a="/_f/"+e+"/";if(!e||!o.pathname.startsWith(a)||!wt(n))return null;const l=o.search.slice(1).split("&").filter(i=>!/^__frame_t(?:=|$)/.test(i)).join("&");return o.origin+"/_f/"+n+"/"+o.pathname.slice(a.length)+(l?"?"+l:"")+o.hash}var Ae="{}";function pe(t){if(!t)return null;const e={ver:t.ver,handoff:t.handoff};return t.seq!==void 0&&(e.seq=t.seq),t.note!==void 0&&(e.note=t.note),e}function Et(t,e){return t!==null&&t.note===void 0&&e?.note!==void 0?{...t,note:e.note}:t}function St(t){const e=t?.k;return e!==null&&typeof e=="object"?e:void 0}function jr(t,e,n,o=null){const a=setTimeout,l=clearTimeout,i=queueMicrotask,f=performance.now.bind(performance),T=new TextEncoder;let w=null,O=null;try{w=history,O=w.replaceState.bind(w)}catch{}const _=(...r)=>{try{console.warn(...r)}catch{}};let R=Nr(),m=null;try{m=sessionStorage}catch{}const h={storage:m,fetch:typeof fetch=="function"?fetch.bind(globalThis):null,entry:location.origin+location.pathname+location.search,ver:R,key:o?.k};let M=o?.k;const K=typeof requestAnimationFrame=="function"?requestAnimationFrame:r=>a(()=>r(f()),16);let v=e?.data??{},L=pe(e?.from),S=e?.gen??0,N=e!==null,$=!1,J=!1,W=null,_e=!1;const ve=new AbortController;let ye=null,C=null,ge=null,we=!1,s=()=>{};const p=new Promise(r=>{s=r});let b=!1,j=!1,I=!1,B,A=null,U=!1,le=!1;const se=r=>{for(const c of[Be(r),de(r)])try{m?.removeItem(c)}catch{}},D=(r,c)=>{try{c!==null&&n.post(r,c)}catch{}},Z=()=>{const r={__frame_hot:!0,ready:C!==null,accept:ge!==null};b&&(r.readData=!0),I&&(r.threw=!0),A?.assess&&(r.preflight=!0),D(r,W)};let be=!1,d=!1,H=!1,X=!1;const G=()=>{be||!_e||H||(be=!0,D({__frame_reveal_hold:!0},"*"))},re=()=>new Promise(r=>{let c,u=0;const y=P=>{if(c===void 0)c=P;else if(P!==c||++u>=8){r();return}try{K(y)}catch{r()}};try{K(y)}catch{r()}}),te=()=>{H=!0,D({__frame_reveal_ready:!0},"*")},Ee=r=>{d||(d=!0,r.then(c=>{if(c===!1)return;let u=null;try{u=A?.settle?.()??null}catch{}return(u===null?re():new Promise(y=>{a(y,50),Promise.resolve(u).then(y,y)}).then(re)).then(te)}))},rn=()=>{if(X||!H)return;X=!0;const r=()=>{try{A?.afterReveal?.()}catch{}};r(),re().then(()=>{r(),te()})},Ne=(r=!1)=>{if(we||C===null||!N||!J)return;we=!0;const c=C,u=v;i(()=>{let y;try{y=c(u)}catch(x){throw s(!1),x}let P=!1;try{P=typeof y?.then=="function"}catch{}if(!P){s(!0);return}Promise.resolve(y).then(()=>s(!0),x=>{s(!1),i(()=>{throw x})})}),Ee(r?p:n.dcl.then(()=>p))},Ce=r=>typeof r=="string"&&ht.test(r)?r:void 0,Qe=r=>{const c={__frame_hot_restart:!0},u=Ce(r?.note);u!==void 0&&(c.note=u),r?.required==="hard-reload"&&(c.required="hard-reload"),D(c,W)},It=Object.freeze({get data(){return J||(j=!0),!N&&!b&&(b=!0,J&&Z()),v},get from(){return L},get gen(){return S},signal:ve.signal,snapshot(r){typeof r=="function"&&(ye=r)},ready(r){typeof r!="function"||C!==null||(C=r,G(),Z(),$&&D({__frame_hot_ready:!0,gen:S},W),Ne())},accept(r){typeof r=="function"&&(ge=r,Z())},restart(r){const c={note:r?.note,required:r?.required};if(J){Qe(c);return}const u=B;B={note:Ce(u?.note)??c.note,required:u?.required==="hard-reload"||c.required==="hard-reload"?"hard-reload":void 0}}});let je=null,xt=()=>{};const nn=new Promise(r=>{xt=r});let on=null;const Ft=()=>on??=n.dcl.then(()=>{let r=!1;try{r=je!==null&&je.expect()}catch{}if(!r)return;const c=je.maxMs;return new Promise(u=>{nn.then(u),a(u,c)})}),Dt=()=>{if(!U||le||A===null)return;le=!0;const r=A;Ft().then(()=>{try{H||r.afterStart(St(e),!1)}catch{}})},Ht=r=>{e!==null&&j&&(b=!0),v={},L=null,S=0;try{m?.removeItem(de(o?.k))}catch{}e!==null&&!r&&Ee(n.dcl.then(()=>C!==null?p:void 0))},an=()=>{U=!0,Ee(Ft().then(()=>C!==null?p:void 0)),Dt()};try{addEventListener("error",()=>{I||C!==null||(I=!0,Z())})}catch{}let ne=-1,et,tt,Se=!0,rt=!1,nt,Ie=null;const ot=r=>{const c=Ie===null;Ie=Se&&r[0]!=="withheld"?r:["withheld",r[1],Ae];let u=r[0];if(Se&&u!=="withheld"){const P={ver:R,handoff:u};et!==void 0&&(P.seq=et),tt!==void 0&&(P.note=tt);try{if(m===null)throw new Error("no storage");m.setItem(Be(M),'{"kv":1,"gen":'+ne+',"from":'+JSON.stringify(P)+(nt!==void 0?',"k":'+JSON.stringify(nt):"")+',"data":'+(u==="ok"?r[2]:Ae)+"}")}catch{u="unavailable"}}else{u="withheld",se(M);try{A?.release?.()}catch{}}const y={__frame_hot_snapshotted:!0,gen:ne,handoff:u,bytes:r[1]};r[3]!==void 0&&(y.errName=r[3]),D(y,W),c&&(u==="snapshot_error"||u==="unclonable"||u==="oversize")&&_("claude.hot: snapshot",u,r[3])},ie=r=>{try{return fr(r?.name)}catch{return"other"}},ce=(r,c,u=0)=>ot(c===void 0?[r,u,Ae]:[r,u,Ae,ie(c)]),ln=r=>{if(r.gen<=ne)return;const c=ne>=0;if(ne=r.gen,et=r.seq,tt=Ce(r.note),typeof r.key=="string"&&dt.test(r.key)&&r.key!==M&&(se(M),M=r.key),Se&&=r.handoff!==!1,c){Ie!==null?ot(Ie):rt&&D({__frame_hot_held:!0,gen:ne},W);return}ve.abort();const u=Object.freeze({handoff:Se,timeoutMs:r.timeoutMs,deadline:r.deadline??dr}),y=ye,P=()=>{if(Se)try{nt=A?.capture()}catch{}if(y===null){ce("empty");return}let E=!1;const q=a(()=>{E||(E=!0,ce("snapshot_timeout"))},Math.max(0,u.timeoutMs));Promise.resolve().then(()=>y(u)).then(ue=>{if(E)return;E=!0,l(q);let Q;try{Q=JSON.stringify(ue)}catch(at){ce("unclonable",at);return}if(typeof Q!="string"){ce("unclonable");return}let ee=Q.length;try{ee=T.encode(Q).length}catch{}if(ee>262144){ce("oversize",void 0,ee);return}ot(["ok",ee,Q])},ue=>{E||(E=!0,l(q),ce("snapshot_error",ue))})};let x=null;try{x=A?.holdForIme()??null}catch{}if(x===null)P();else{rt=!0,D({__frame_hot_held:!0,gen:ne},W);const E=()=>{rt=!1,P()};x.then(E,E)}},sn=r=>{if(!$||N||C===null||r.gen!==S)return;let c=null;try{c=gt(m,o&&{k:o.k,g:r.gen})}catch{}if(c!==null&&c.gen!==r.gen){c=null;try{m?.removeItem(de(o?.k))}catch{}}v=c?.data??{},L=Et(pe(c?.from??r.from),pe(r.from)),c!==null&&(S=c.gen),N=!0,$=!1;const u=St(c);p.then(y=>{try{y&&A?.afterStart(u,!0)}catch{}}),Ne(!0)};let xe=0;const cn=r=>{const c=ge;if(c===null||r.id<=xe)return;xe=r.id;const u=A?.assess;if(r.preflight===void 0||u===void 0){qt(r,c);return}let y=!1;const P=q=>{y||(y=!0,l(E),r.id===xe&&qt(r,c,q))},x=()=>P(u.timeout(r)),E=a(x,br+100);u.run(r,window).then(P,x)},qt=(r,c,u)=>{let y,P=!1,x=!1,E,q,ue=null;const Q=g=>{if(x)return!1;if(E!==void 0&&E!==g)return _(`claude.hot: u.${g}() ignored - u.${E}() was called first`),!1;const Y=E===void 0;return E=g,Y},ee=g=>{E="restart",_(`claude.hot: ${g} - restarting`)},at=()=>{if(!Q("adopt")||r.id!==xe)return;const g=r.to.ver;if(Fe.required!=="none"){ee(`u.adopt() needs required 'none', it is '${Fe.required}'`);return}if(!wt(g)){ee("u.adopt() cannot address this version");return}if(!R||g===R)return;const Y=R,V=h.entry;let De="",st,fe=null,He;try{De=location.href,st=w.state,fe=bt(De,Y,g),fe!==null&&(O(st,"",fe),location.pathname.startsWith("/_f/"+g+"/")?fe=location.href:He="navigate event canceled")}catch(ct){He=ie(ct)}if(He!==void 0){q="adopt_failed",ee(`adopt_failed ${He}; URL not changed`);return}fe===null?(q="adopt_skipped",_(`claude.hot: adopt_skipped - page already left /_f/${Y}/; URL not changed, update still applied`)):q="adopted",R=h.ver=g;try{h.entry=bt(V,Y,g)??V}catch{}const it=fe;ue=()=>{if(R===g){if(it!==null)try{if(location.href!==it)_("claude.hot: adopt_revert_skipped - update not applied; URL left where the page navigated");else{if(O(st,"",De),location.href!==De){_("claude.hot: adopt_revert_failed navigate event canceled - URL still at the new version");return}q="adopt_reverted",_("claude.hot: adopt_reverted - adopt() was called but the handler threw; URL restored")}}catch(ct){_(`claude.hot: adopt_revert_failed ${ie(ct)} - URL still at the new version`);return}R=h.ver=Y,h.entry=V,it===null&&(q=void 0)}}},Fe=Object.freeze({from:{ver:r.from.ver,seq:r.from.seq},to:{ver:r.to.ver,seq:r.to.seq},changed:Lr(r.changed),required:r.required,deadline:r.deadline,adopt:at,defer(){return Q("defer")&&Fe.deadline.now&&ee("u.defer() past the deadline"),yt},restart(g){return Q("restart"),E==="restart"&&!x&&(y??=Ce(g?.note),P||=g?.required==="hard-reload"),yt},...u?.update}),un=(g,Y)=>{x=!0,g==="threw"?(ue?.(),y??=ie(Y).toLowerCase()):E===void 0&&_(g==="timeout"?"claude.hot: accept handler did not answer in time - restarting":"claude.hot: accept handler settled without defer/restart/adopt - restarting");const V={__frame_hot_verdict:!0,id:r.id};V.verdict=g==="threw"||E===void 0||E==="restart"?"restart":E==="adopt"?"applied":"deferred",V.verdict==="restart"&&(P&&(V.required="hard-reload"),y!==void 0&&(V.note=y)),q!==void 0&&(V.verdict==="applied"||q!=="adopted")&&(V.adopt=q),D(Object.assign(V,u?.verdict),W)};let Bt=!1;const lt=(g,Y)=>Bt?!1:(Bt=!0,l(fn),un(g,Y),!0),fn=a(()=>lt("timeout"),r.verdictTimeoutMs);Promise.resolve().then(()=>c(Fe)).then(()=>lt("settled"),g=>{!lt("threw",g)&&E==="adopt"&&Qe({note:ie(g).toLowerCase()}),_("claude.hot: accept",ie(g))})};try{t.hot===void 0&&Object.defineProperty(t,"hot",{value:It,writable:!1,configurable:!1,enumerable:!1})}catch{}return{hot:It,boot:h,afterConnect(){_e=!0,(e!==null||C!==null)&&G()},onInit(r,c){W=c,J=!0;const u=Ar(r)?r:null;u?.phase==="final"&&e!==null&&e.gen===u.gen?(N=!0,L=Et(L,pe(u.from)),an()):($=u?.phase==="pending",Ht($),N=!$,S=u?.gen??0,L=pe(u?.from)),Z(),$&&C!==null&&D({__frame_hot_ready:!0,gen:S},c),B!==void 0&&(Qe(B),B=void 0),Ne()},onNoInit(){J=!0,Ht(!1),N=!0,Ne()},onShell(r){return r?.__frame_revealed===!0?(rn(),!1):Rr(r)?(ln(r),!0):Tr(r)?(sn(r),!0):Pr(r)?(cn(r),!0):!1},attachExtras(r){A=r,Dt(),r.assess&&Z()},inSlot:()=>de(M),hydration(r,c){je??={expect:r,maxMs:c}},hydrated(){xt()},carried(){return N?v:{}},presented:()=>H}}var mn="frame_ldx_runtime",Ir="frame_ldx_build",_n="script#an-form",xr=256;function At(t,e,n){for(const o of t)n(o)&&t.delete(o);t.size>=xr&&!t.has(e)&&t.delete(t.values().next().value),t.add(e)}function ze(t,e,n){try{const o=t[e];if(typeof o!="function")return;t[e]=function(...a){const l=o.apply(this,a);try{n(this)}catch{}return l}}catch{}}var Ke;function Fr(){if(Ke)return Ke;const t={media:new Set,contexts:new Set,onStart:null,onPause:null};Ke=t;const e=window.HTMLMediaElement?.prototype;e&&(ze(e,"play",a=>{At(t.media,a,l=>l.paused),t.onStart?.(a)}),ze(e,"pause",a=>t.onPause?.(a)));const n=window.AudioContext,o=window.AudioNode?.prototype;return n&&o&&ze(o,"connect",a=>{const l=a.context;l instanceof n&&(At(t.contexts,l,i=>i.state==="closed"),t.onStart?.(l))}),t}function Dr(t){let e=window;for(let n=0;e.parent&&e.parent!==e&&n<8;n++)if(e=e.parent,t(e))return!0;return!1}function Hr(){let t=null;const e=()=>t??parent,n=o=>t?o===t:Dr(a=>a===o);return{post(o,a){if(t){e().postMessage(o,a);return}let l=parent;for(let i=0;i<8&&(l.postMessage(o,a),!(!l.parent||l.parent===l));i++)l=l.parent},on(o){const a=l=>{const i=l.source;n(i)&&o(l.data,l.origin,l.isTrusted,()=>{t??=i})};return addEventListener("message",a),()=>removeEventListener("message",a)},port:o=>({post(a,l){if(l?.activation){e().postMessage(a,{targetOrigin:o,includeUserActivation:!0});return}if(l?.transfer){e().postMessage(a,o,l.transfer);return}e().postMessage(a,o)},on(a,l){const i=f=>{n(f.source)&&f.origin===o&&a(f.data,f)};return addEventListener("message",i,l),()=>removeEventListener("message",i,l)}})}}function qr(){const t={post:()=>{},on:()=>()=>{}};return{...t,port:()=>t}}var $e="__frame_scroll",Br=150,Ur=310,zr=160,Kr=3e4;function $r(){let t=0,e=!1,n=!1,o=!1,a=0,l=null;const i=v=>{try{sessionStorage.setItem($e,JSON.stringify({y:v}))}catch{}},f=()=>{if(clearTimeout(t),l===null)return;const v=l;l=null,i(v)},T=()=>{if(e){e=!1;return}n=!0,l=scrollY,clearTimeout(t),t=setTimeout(f,Br)};try{addEventListener("scroll",T,{passive:!0}),addEventListener("pagehide",f)}catch{}const w=()=>{let v;try{v=sessionStorage.getItem($e)}catch{return null}if(v===null)return null;let L;try{L=JSON.parse(v)}catch{L=null}const S=L?.y;if(!(typeof S=="number"&&Number.isFinite(S)&&S>=0)){try{sessionStorage.removeItem($e)}catch{}return null}return S};let O=!1;const _=v=>{try{const L=scrollY;scrollTo({top:v,left:0,behavior:"instant"}),a=v,o=!0,clearTimeout(t),l=null,i(v);const S=scrollY;S!==L&&(e=!0),S!==v&&!O&&(O=!0,addEventListener("load",()=>{try{if(scrollY===S){const N=w();_(N!==null?N:a)}}catch{}},{once:!0}))}catch{}},R=()=>{try{return!!location.hash}catch{return!0}};let m=!1;const h=()=>{try{if(m||innerWidth>Ur||innerHeight>zr)return;m=!0;const v=Date.now(),L=()=>{try{removeEventListener("resize",L)}catch{}if(Date.now()-v>Kr||n||R())return;const S=w();_(S!==null?S:a)};addEventListener("resize",L)}catch{}};let M=!1,K=!1;return{restore(){if(M||(M=!0,R()))return;const v=w();v!==null&&(_(v),h())},promoted(){if(K||(K=!0,R()))return;const v=w();v!==null?(_(v),h()):o&&_(a)}}}function Wr(t,e,n,o){let a=null;try{a=window.trustedTypes?.createPolicy("frame-runtime",{createScriptURL:T=>T})??null}catch{}const l=window.Worker,i=l?.prototype,f=Object.freeze({Worker:l,workerOn:i?.addEventListener,workerPost:i?.postMessage,workerTerminate:i?.terminate,fetch:window.fetch.bind(window),preventDefault:Event.prototype.preventDefault,now:Date.now,policy:a,origins:e});n(t).then(T=>T?.bootTopLevel?T.bootTopLevel(f,o):o.settle()).catch(()=>o.settle())}var vn="modulepreload",yn=function(t){return"/"+t},gn={},Vr=function(e,n,o){let a=Promise.resolve();function l(i){const f=new Event("vite:preloadError",{cancelable:!0});if(f.payload=i,window.dispatchEvent(f),!f.defaultPrevented)throw i}return a.then(i=>{for(const f of i||[])f.status==="rejected"&&l(f.reason);return e().catch(l)})},Xr=window===top,kt=Object.getOwnPropertyDescriptor(window,"claude"),ke=Mr(Xr,window.__FRAME_PREAMBLE?.topLevel,kt?.writable===!1),We=typeof ke=="object"&&ke[0],k=We?qr():Hr();(function(){const t=Object.defineProperty,e=globalThis,n=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let o=0;for(let a=0;a<n.length;a++){const l=n[a];try{t(e,l,{value:void 0,writable:!1,configurable:!1})}catch{try{delete e[l]}catch{}try{t(e,l,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof e[l]=="function"&&o++}if(o&&ke==="framed")try{k.post({__frame_rtc_lockdown_failed:o},"*")}catch{}})();var Gr=1e4,Yr=2e3,Ve=2e3,Rt=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function Tt(t){for(const e of Rt)if(e.endsWith(":*"))try{const n=new URL(t);if(`${n.protocol}//${n.hostname}:*`===e)return!0}catch{}else if(t===e)return!0;return!1}var Re=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),Te=window.__FRAME_PREAMBLE?.transforms,Xe=window.__FRAME_PREAMBLE?.comments,Ge=window.__FRAME_PREAMBLE?.translate,me=window.__FRAME_PREAMBLE?.ldx;function Ot(t){return Vr(()=>import("/_runtime/"+t),void 0)}var Oe=new Set,Jr=setTimeout,Zr=800+800*Math.random();function ae(t){return Ot(t).catch(()=>new Promise(e=>Jr(e,Zr)).then(()=>Ot(t+"?r=1")).then(e=>(e!==void 0&&Oe.add(t),e)))}function Lt(t,e,n){return{contract:t.contract,changes:new Set(t.changes??[]),flags:new Set(t.flags??[]),capabilities:t.capabilities??{},capBudgets:t.capBudgets??{},transforms:new Map,shellOrigin:e,shell:n,mount:Ze,hooks:Pe,pipe:()=>({wrap:(o,a)=>(...l)=>{try{return a(...l)}catch(i){return Promise.reject(i)}}})}}var Le=null,F=null;function Pt(t,e,n){try{Object.defineProperty(t,e,{value:n,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(t,e,{value:n,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var Ye=!1,Pe={editBefore:null,edit:null};function Qr(t,e,n=!1){const o=[];let a;if(n)try{Pe.editBefore?.(t)}catch{}for(const l of t.elements){const i=document.querySelector(`[data-id="${l.target}"]`);if(!i){a=l.target;break}if([...Object.keys(l.attrsSet??{}),...l.attrsRemoved??[]].some(f=>!Wt(f)||Vt(i,f))){a=l.target;break}if(l.text!==void 0&&(!Jt(i)||tr(i))){a=l.target;break}for(const[f,T]of Object.entries(l.attrsSet??{}))if(!Nt(i,f)){try{i.setAttribute(f,T)}catch{}Mt(i,f,T)}for(const f of l.attrsRemoved??[])Nt(i,f)||(i.removeAttribute(f),Mt(i,f,null));typeof l.text=="string"&&Qt(i,l.text),o.push(l.target)}if(n)try{Pe.edit?.(t.seq,o,a)}catch{}if(a!==void 0){k.post({__frame_patch_miss:{seq:t.seq}},e);return}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:t.seq,targets:o}}))}catch{}}function Mt(t,e,n){if(!(t instanceof HTMLInputElement))return;const o=e.toLowerCase();o==="checked"?t.checked=n!==null:o==="value"&&t.type!=="file"&&(t.value=n??"")}function Nt(t,e){const n=e.toLowerCase(),o=t;return n==="data-id"||(n==="value"||n==="checked")&&(o.__artifactSecret===!0||/^(password|hidden|file)$/.test(o.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${t.getAttribute("autocomplete")??""} ${o.autocomplete??""}`))}function Ct(t){const e=document.documentElement;t==="light"||t==="dark"?(e.dataset.theme=t,e.style.colorScheme=t,Ye=!0):Ye&&(delete e.dataset.theme,e.style.colorScheme="",Ye=!1)}var Me=new Map;function en(){let t;const e={u:new Promise(n=>{t=n}),r:n=>{e.done=!0,t(n)},done:!1,nulled:!1};return e}function Je(){for(const t of Me.values())t.done||(t.nulled=!0,t.r(null))}var tn=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),Ze=(t,e)=>{const n=Me.get(t);if(!n||n.done){n?.nulled&&F&&k.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:t,phase:"install"}},F);return}const o=typeof e=="function"?Object.setPrototypeOf(e,tn):Object.assign(Object.create(null),e);typeof o.then=="function"&&delete o.then,n.r(Object.freeze(o))};function jt(){const t=kt?.value??{};Pt(window,"claude",t);for(const e of Object.keys(Re)){if(t[e]!==void 0){Pt(t,e,t[e]);continue}Me.set(e,en())}if(t.use===void 0){const e=n=>{if(typeof n!="string"||!Object.hasOwn(Re,n))return Promise.resolve(null);const o=Me.get(n);return o?o.u:Promise.resolve(t[n]??null)};try{Object.defineProperty(t,"use",{value:e,writable:!0,configurable:!0,enumerable:!1})}catch{}}return t}if(ke==="framed"){const t=Te&&oe.test(Te)?ae(Te).catch(()=>{}):Promise.resolve(void 0),e=s=>{if(s.type==="auxclick"&&s.button!==1)return;const p=s.target,b=p&&p.closest?p.closest("a[href],area[href]"):null;if(!b)return;const j=b.getAttribute("href");if(!j)return;let I;try{I=new URL(j,document.baseURI)}catch{return}if((I.protocol==="http:"||I.protocol==="https:")&&I.origin!==location.origin){s.preventDefault();const B=(b.getAttribute("target")??"").toLowerCase(),A=s.type==="auxclick"||s.metaKey||s.ctrlKey||s.shiftKey||s.altKey||!["","_self","_top","_parent"].includes(B);k.post({__frame_nav:!0,url:I.href,newTab:A},"*")}};addEventListener("click",e,!0),addEventListener("auxclick",e,!0);const n={},o=s=>{s.isTrusted&&(n.pointer=!0)},a=s=>{s.isTrusted&&(n.click=!0)};addEventListener("pointermove",o,{capture:!0,passive:!0}),addEventListener("click",a,{capture:!0,passive:!0});const l={cb:null};addEventListener("keydown",s=>l.cb?.(s),!0);const i={cb:null};addEventListener("keydown",s=>i.cb?.(s));const f=Fr();t.then(s=>s?.installEscapeForward?.(l,p=>{F&&k.post(p,F)})),t.then(s=>{try{s?.installFocusKeep?.()}catch{}}),t.then(s=>{if(!s?.wireNav)return;const p=k.port("*");s.wireNav(p),removeEventListener("click",e,!0),removeEventListener("auxclick",e,!0),removeEventListener("pointermove",o,!0),removeEventListener("click",a,!0),s.wireEngagement?.(n,p)});let T=null;try{T=$r()}catch{}const w=document.readyState==="loading"?new Promise(s=>document.addEventListener("DOMContentLoaded",()=>s(),{once:!0})):Promise.resolve();let O=null,_=null;try{_=vr(window.name),O=gt(null,_)}catch{}const R=jt();let m=null;try{m=jr(R,O,{post:(s,p)=>k.post(s,p),dcl:w},_)}catch{}t.then(s=>{try{m&&s?.installHotExtras?.(m)}catch{}});let h=null;const M=()=>Array.isArray(h?.flags)&&h.flags.includes("frame_ldx_runtime")&&!!me&&oe.test(me)&&document.querySelector("script#an-form")!==null;try{m?.hydration(M,yr)}catch{}let K=null,v=0;const L=k.on((s,p,b,j)=>{Tt(p)&&ar(s)&&(j(),h=s.__frame_init,F=p,L(),clearTimeout(v),K?.())});k.post({__frame_connect:!0},"*");try{m?.afterConnect()}catch{}const S=setTimeout,N=clearTimeout;let $=()=>NaN,J=()=>[];try{$=performance.now.bind(performance),J=performance.getEntriesByType.bind(performance)}catch{}let W=0;const _e=()=>{try{k.post({__frame_alive:!0},"*")}catch{}W=S(_e,Yr)},ve=()=>N(W);_e(),addEventListener("load",ve,{once:!0});const ye=new Promise(s=>{K=s,v=setTimeout(()=>{L(),s()},Gr)}),C=new WeakSet;addEventListener("error",s=>{s.target&&C.add(s.target)},!0);const ge=()=>{let s=[];try{s=[...document.querySelectorAll("link[rel~=stylesheet]:not([rel~=alternate])")].filter(b=>!b.sheet&&!b.disabled&&!C.has(b)&&b.getAttribute("href")&&URL.canParse(b.href)&&(!b.media||matchMedia(b.media).matches))}catch{}let p=s.length;return p===0?Promise.resolve():new Promise(b=>{try{const j=Ve-$(),I=S(b,j>0?j<Ve?j:Ve:0),B=()=>{--p===0&&(N(I),b())};for(const A of s)A.addEventListener("load",B,{once:!0}),A.addEventListener("error",B,{once:!0})}catch{b()}})};w.then(()=>{try{T?.restore()}catch{}}),Promise.all([ye,w,t]).then(([,,s])=>{if(h?.hostOverlays!==!0||!F)return;let p=!1;try{p=s?.declaresCover?.()===!0}catch{}k.post({__frame_layout:{cover:p}},F)});const we={cb:null};k.on((s,p)=>{if(Tt(p)&&lr(s)){try{T?.promoted()}catch{}we.cb?.()}}),ye.then(async()=>{if(!h||!F){Je();try{m?.onNoInit()}catch{}return}if(Ct(h.theme),h.hostVisible===!1&&t.then(d=>d?.applyHostVisible?.(!1,f)),h.hostKeys!==void 0){const d=F,H=h.hostKeys;t.then(X=>X?.installHostKeyForward?.(i,H,G=>k.post(G,d)))}try{m?.onInit(h.hot,F)}catch{}const s=F,p=k.port(s);let b=!1,j=!1;k.on((d,H,X)=>{if(H!==s)return;try{if(m?.onShell(d))return}catch{}if(ir(d)&&Ct(d.__frame_theme.theme),sr(d)){const te=d.__frame_host_visible.visible;t.then(Ee=>Ee?.applyHostVisible?.(te,f))}or(d)&&Qr(d.__frame_patch,s,X);const G=d?.__fc_mode;G&&typeof G=="object"&&!b&&Xe&&oe.test(Xe)&&(b=!0,ae(Xe).then(te=>te.install?.(s,G.on===!0,p)).catch(()=>{}));const re=d?.__ft_cmd;re&&typeof re=="object"&&!j&&Ge&&oe.test(Ge)&&(j=!0,ae(Ge).then(te=>te.install?.(s,re,p)).catch(()=>{}))});const I=Object.keys(h.capabilities??{}).filter(d=>Object.hasOwn(Re,d)).map(d=>[d,Re[d]]).filter(d=>typeof d[1]=="string"&&oe.test(d[1])),B=await Promise.allSettled(I.map(([,d])=>ae(d))),A=await t,U=F;if(A?.buildBoot||k.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},U),A?.buildBoot)try{Le=A.buildBoot(h,A.TRANSFORMS??{},{shellOrigin:U,mount:Ze,hooks:Pe,shell:p},d=>k.post({__frame_cap_telemetry:d},U))}catch{k.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms",phase:"install"}},U),Le=Lt(h,U,p)}else Le=Lt(h,U,p);const le=(d,H)=>k.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:d,phase:H}},U),se=d=>k.post({__frame_cap_recovered:{cap:d}},U);A?.buildBoot&&Oe.has(Te??"")&&se("_transforms");const D=Le;B.forEach((d,H)=>{const[X,G]=I[H];if(d.status!=="fulfilled"){le(X);return}Oe.has(G)&&se(X);try{d.value?.install?.(D)}catch{le(X,"install")}}),Je(),await w,await ge(),ve();const Z=Ut(J,$);k.post(Z?{__frame_ready:!0,nav:Z}:{__frame_ready:!0},F),t.then(d=>d?.installSizeReporter?.(U,we,p));let be=!1;try{be=M()}catch{}me&&be?ae(me).then(d=>d?.boot?.({shellOrigin:s,build:D.flags.has(Ir),hot:m?.hot??null,carried:m?.carried(),presented:()=>m?.presented()??!0})).catch(()=>!1).then(d=>{m?.hydrated(),d!==!0?le("_ldx"):Oe.has(me)&&se("_ldx")}):m?.hydrated()})}else We&&(jt(),Wr(We,Rt,ae,{settle:Je,mount:Ze}))})();</script><!-- /frame-runtime --><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Lapinig Municipal Site Prototype</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+  :root{
+    --ground:#FBF7EF;
+    --surface:#FFFFFF;
+    --surface-2:#F0EADD;
+    --ink:#12222B;
+    --ink-2:#42575F;
+    --ink-3:#75848A;
+    --rule:#D7CEC0;
+    --rule-soft:#E9E2D5;
+    --navy:#0A3346;
+    --sea:#0C7490;
+    --sea-soft:#D6EFF6;
+    --on-sea:#FFFFFF;
+    --c1:#D7F0F7;--c2:#DDF2E2;--c3:#E2E8FB;
+    --c4:#EDE3F8;--c5:#D8EDFB;--c6:#E7F4D8;
+    --gold:#A9761A;
+    --gold-soft:#F6EBD6;
+    --alert:#9E3227;
+    --alert-soft:#F8E3E0;
+    --good:#1C6B4C;
+    --good-soft:#DDEFE6;
+    --shadow:0 1px 2px rgba(10,46,62,.07),0 6px 20px rgba(10,46,62,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#0A161C;
+      --surface:#111F27;
+      --surface-2:#182A33;
+      --ink:#E6EFF2;
+      --ink-2:#AFC3CB;
+      --ink-3:#7E959E;
+      --rule:#253B45;
+      --rule-soft:#1C2E37;
+      --navy:#08222E;
+      --sea:#7FD3EE;
+      --sea-soft:#10303D;
+      --on-sea:#06202B;
+      --c1:#123642;--c2:#153420;--c3:#1B2543;
+      --c4:#26183A;--c5:#122C43;--c6:#1E3316;
+      --gold:#DBA53F;
+      --gold-soft:#2C2214;
+      --alert:#E8867A;
+      --alert-soft:#2E1917;
+      --good:#5FBF95;
+      --good-soft:#12291F;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0A161C;--surface:#111F27;--surface-2:#182A33;
+    --ink:#E6EFF2;--ink-2:#AFC3CB;--ink-3:#7E959E;
+    --rule:#253B45;--rule-soft:#1C2E37;--navy:#08222E;
+    --sea:#7FD3EE;--sea-soft:#10303D;--on-sea:#06202B;--gold:#DBA53F;--gold-soft:#2C2214;
+    --c1:#123642;--c2:#153420;--c3:#1B2543;--c4:#26183A;--c5:#122C43;--c6:#1E3316;
+    --alert:#E8867A;--alert-soft:#2E1917;--good:#5FBF95;--good-soft:#12291F;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.3);
+  }
+
+  *{box-sizing:border-box;}
+  body{background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{margin:0;}
+  p{margin:0 0 12px;}
+  a{color:var(--sea);}
+  button{font-family:inherit;}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:3px;}
+
+  /* ---------- prototype banner ---------- */
+  .proto{
+    background:var(--gold-soft);border-bottom:2px solid var(--gold);
+    color:var(--ink);padding:8px 16px;font-size:12.5px;font-weight:600;
+    text-align:center;letter-spacing:.01em;position:sticky;top:0;z-index:60;
+  }
+  .proto span{font-weight:400;color:var(--ink-2);}
+
+  /* ---------- masthead ---------- */
+  .top{background:var(--navy);color:#EAF3F6;}
+  .top-in{max-width:1080px;margin:0 auto;padding:14px 16px;
+    display:flex;align-items:center;gap:14px;}
+  .seal{width:44px;height:44px;flex:none;border-radius:50%;
+    background:linear-gradient(160deg,#14536E,#0A2E3E);
+    border:2px solid rgba(255,255,255,.45);
+    display:grid;place-items:center;font-family:"Newsreader",Georgia,serif;
+    font-weight:700;font-size:17px;color:#F2D9A2;}
+  .top h1{font-family:"Newsreader",Georgia,serif;font-weight:700;
+    font-size:20px;line-height:1.12;letter-spacing:-.01em;}
+  .top .rp{font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    color:#8FB4C4;margin-bottom:2px;}
+  .top .sub{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+    color:#9FC3D1;margin-top:2px;}
+  .top .sub a{color:#F2D9A2;text-decoration:none;}
+  .top .sub a:hover{text-decoration:underline;}
+  .top .spacer{flex:1;}
+  .askbtn{background:var(--gold);color:#241605;border:0;border-radius:999px;
+    padding:9px 16px;font-weight:700;font-size:13.5px;cursor:pointer;white-space:nowrap;}
+  .askbtn:hover{filter:brightness(1.06);}
+
+  /* ---------- nav ---------- */
+  nav{background:var(--surface);border-bottom:1px solid var(--rule);
+    position:sticky;top:33px;z-index:50;box-shadow:var(--shadow);}
+  .nav-in{max-width:1080px;margin:0 auto;display:flex;gap:2px;
+    overflow-x:auto;padding:0 8px;-webkit-overflow-scrolling:touch;}
+  .nav-in::-webkit-scrollbar{display:none;}
+  .nav-in button{background:none;border:0;padding:13px 13px;font-size:14px;
+    font-weight:600;color:var(--ink-2);cursor:pointer;white-space:nowrap;
+    border-bottom:3px solid transparent;}
+  .nav-in button[aria-current="page"]{color:var(--sea);border-bottom-color:var(--sea);}
+  .nav-in button:hover{color:var(--ink);}
+
+  main{max-width:1080px;margin:0 auto;padding:0 16px 90px;}
+  .page{display:none;}
+  .page.on{display:block;}
+
+  /* ---------- advisory ---------- */
+  .advisory{background:var(--alert-soft);border:1px solid var(--alert);
+    border-left:5px solid var(--alert);border-radius:6px;padding:14px 16px;margin:18px 0;}
+  .advisory .tag{font-size:11px;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--alert);display:block;margin-bottom:4px;}
+  .advisory p{margin:0;font-size:15px;}
+  .advisory .when{font-size:12.5px;color:var(--ink-2);margin-top:6px;}
+  .advisory.fake{background:repeating-linear-gradient(135deg,var(--surface-2),var(--surface-2) 14px,var(--ground) 14px,var(--ground) 28px);
+    border:2px dashed var(--ink-3);border-left:2px dashed var(--ink-3);}
+  .advisory.fake .tag{color:var(--ink-2);}
+  .advisory.fake p{background:var(--surface);display:inline-block;padding:6px 9px;border-radius:5px;}
+  .advisory.fake .when{background:var(--surface);display:inline-block;padding:4px 8px;border-radius:5px;}
+  .howworks{background:var(--sea-soft);border-left:4px solid var(--sea);border-radius:0 8px 8px 0;
+    padding:13px 15px;margin:0 0 18px;font-size:14.2px;color:var(--ink-2);}
+  .howworks b{display:block;color:var(--ink);margin-bottom:4px;font-size:14.5px;}
+
+  /* ---------- home masthead ---------- */
+  .mhero{position:relative;border-radius:14px;overflow:hidden;margin:18px 0 2px;
+    background:#0C2A38;color:#EAF3F6;}
+  .mhero .art{position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(85% 130% at 90% 4%, rgba(255,186,92,.42) 0%, rgba(255,186,92,0) 58%),
+      radial-gradient(75% 120% at 8% 104%, rgba(38,198,218,.44) 0%, rgba(38,198,218,0) 64%),
+      linear-gradient(152deg,#0A3346 0%,#0F4C63 46%,#14708C 100%);}
+  .mhero .art::after{content:"";position:absolute;inset:0;opacity:.5;
+    background:repeating-linear-gradient(115deg,rgba(255,255,255,.045) 0 1px,rgba(255,255,255,0) 1px 9px);}
+  .mhero .in{position:relative;z-index:1;padding:30px 24px 26px;
+    display:flex;gap:20px;align-items:center;}
+  .mhero .sealslot{flex:0 0 96px;width:96px;height:96px;border-radius:50%;
+    border:2px dashed rgba(242,201,76,.8);background:rgba(0,0,0,.22);
+    display:grid;place-items:center;text-align:center;padding:9px;
+    font-size:9px;line-height:1.25;font-weight:800;letter-spacing:.05em;
+    text-transform:uppercase;color:#F2C94C;}
+  .mhero .eyebrow{font-size:10.5px;font-weight:800;letter-spacing:.17em;
+    text-transform:uppercase;color:#9FC4D2;margin-bottom:7px;}
+  .mhero h2{font-family:"Newsreader",Georgia,serif;font-weight:700;
+    font-size:clamp(28px,6.2vw,44px);line-height:1.02;letter-spacing:-.02em;
+    margin:0 0 3px;color:#fff;}
+  .mhero .mwr{font-weight:600;font-style:italic;color:#8ECBDD;font-size:15.5px;margin-bottom:9px;}
+  .mhero .strap{color:#C4DAE3;font-size:14.4px;margin:0;max-width:52ch;}
+  .mhero .mfacts{margin-top:11px;display:flex;flex-wrap:wrap;gap:7px;}
+  .mhero .mfacts span{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;padding:4px 11px;font-size:12px;font-weight:600;color:#DCEBF1;}
+  .mcap{display:none;font-size:12px;color:var(--ink-3);margin:6px 2px 0;}
+  .mhero.photo ~ .mcap{display:block;}
+  @media(max-width:620px){
+    .mhero .in{flex-direction:column;align-items:flex-start;gap:14px;padding:24px 18px 22px;}
+    .mhero .sealslot{flex:0 0 66px;width:66px;height:66px;font-size:7.6px;padding:6px;}
+    .mhero .isle.a{width:86px;height:19px;} .mhero .isle.b{width:52px;height:11px;}
+  }
+
+  /* ---------- hero + search ---------- */
+  .hero{padding:18px 0 6px;}
+  .hero h2{font-family:"Newsreader",Georgia,serif;font-weight:700;
+    font-size:clamp(26px,5vw,38px);line-height:1.1;letter-spacing:-.015em;
+    margin-bottom:8px;text-wrap:balance;}
+  .hero p{color:var(--ink-2);max-width:56ch;}
+  .searchwrap{position:relative;margin:16px 0 8px;}
+  .searchwrap input{width:100%;padding:15px 16px 15px 44px;font-size:16.5px;
+    border:2px solid var(--rule);border-radius:10px;background:var(--surface);
+    color:var(--ink);font-family:inherit;}
+  .searchwrap input:focus{border-color:var(--sea);outline:none;}
+  .searchwrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);
+    width:19px;height:19px;stroke:var(--ink-3);fill:none;stroke-width:2;}
+  .hint{font-size:13px;color:var(--ink-3);margin:0 0 4px;}
+
+  /* ---------- quick tiles ---------- */
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));
+    gap:12px;margin:20px 0 8px;}
+  .tile{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:16px;text-align:left;cursor:pointer;box-shadow:var(--shadow);
+    display:flex;gap:12px;align-items:flex-start;color:inherit;font-family:inherit;}
+  .tile:hover{border-color:var(--sea);}
+  .tile .ic{width:38px;height:38px;flex:none;border-radius:10px;background:var(--sea-soft);
+    display:grid;place-items:center;font-size:19px;}
+  .tile .ic.c1{background:var(--c1);} .tile .ic.c2{background:var(--c2);}
+  .tile .ic.c3{background:var(--c3);} .tile .ic.c4{background:var(--c4);}
+  .tile .ic.c5{background:var(--c5);} .tile .ic.c6{background:var(--c6);}
+  .tile .ic.cw{background:var(--alert-soft);}
+  .tile b{display:block;font-size:15.5px;margin-bottom:2px;}
+  .tile span{font-size:13px;color:var(--ink-2);line-height:1.4;}
+
+  /* ---------- sections ---------- */
+  h3.sec{font-family:"Newsreader",Georgia,serif;font-weight:700;
+    font-size:23px;margin:32px 0 4px;letter-spacing:-.01em;}
+  .seclead{color:var(--ink-2);font-size:15px;margin-bottom:14px;max-width:62ch;}
+
+  /* ---------- service list ---------- */
+  .svc{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:15px 16px;margin-bottom:10px;cursor:pointer;box-shadow:var(--shadow);
+    display:block;width:100%;text-align:left;font-family:inherit;color:inherit;}
+  .svc:hover{border-color:var(--sea);}
+  .svc b{font-size:16px;display:block;}
+  .svc .alt{font-size:13px;color:var(--ink-3);font-style:italic;margin-top:1px;}
+  .svc .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+  .pill{font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:999px;
+    background:var(--surface-2);color:var(--ink-2);}
+  .pill.office{background:var(--sea-soft);color:var(--sea);}
+  .pill.time{background:var(--good-soft);color:var(--good);}
+  .pill.fee{background:var(--gold-soft);color:var(--gold);}
+  .nores{padding:22px;text-align:center;color:var(--ink-2);
+    border:1px dashed var(--rule);border-radius:10px;}
+
+  /* ---------- detail ---------- */
+  .back{background:none;border:0;color:var(--sea);font-weight:600;font-size:14.5px;
+    cursor:pointer;padding:14px 0 4px;}
+  .detail-head{border-bottom:2px solid var(--rule);padding-bottom:14px;margin-bottom:18px;}
+  .detail-head h2{font-family:"Newsreader",Georgia,serif;font-weight:700;
+    font-size:clamp(24px,4.6vw,32px);line-height:1.12;margin-bottom:4px;}
+  .detail-head .alt{color:var(--ink-3);font-style:italic;font-size:15px;}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;background:var(--rule);border:1px solid var(--rule);
+    border-radius:10px;overflow:hidden;margin-bottom:20px;}
+  .fact{background:var(--surface);padding:13px 15px;}
+  .fact dt{font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-3);font-weight:700;margin-bottom:3px;}
+  .fact dd{margin:0;font-size:17px;font-weight:600;}
+  .blockhead{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--sea);margin:22px 0 8px;}
+  ul.req{list-style:none;padding:0;margin:0 0 8px;}
+  ul.req li{padding:10px 0 10px 30px;border-bottom:1px solid var(--rule-soft);
+    position:relative;font-size:15.5px;}
+  ul.req li:before{content:"";position:absolute;left:4px;top:15px;width:12px;height:12px;
+    border:2px solid var(--sea);border-radius:3px;}
+  ol.steps{padding-left:22px;margin:0;}
+  ol.steps li{padding:6px 0;font-size:15.5px;}
+  ol.steps li::marker{color:var(--sea);font-weight:700;}
+
+  /* ---------- generic content blocks ---------- */
+  .card{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:17px 18px;margin-bottom:12px;box-shadow:var(--shadow);}
+  .card h4{font-size:16.5px;margin-bottom:6px;}
+  .card p:last-child{margin-bottom:0;}
+  .card .small{font-size:14px;color:var(--ink-2);}
+  .rowlist{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    overflow:hidden;box-shadow:var(--shadow);margin-bottom:14px;}
+  .rowlist div.r{display:flex;justify-content:space-between;gap:14px;
+    padding:12px 16px;border-bottom:1px solid var(--rule-soft);font-size:15px;}
+  .rowlist div.r:last-child{border-bottom:0;}
+  .rowlist .n{font-weight:600;}
+  .rowlist .v{color:var(--ink-2);text-align:right;font-size:14px;}
+  .brgy{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+  .brgy span{background:var(--surface);border:1px solid var(--rule);border-radius:8px;
+    padding:9px 12px;font-size:14.5px;}
+  .note{background:var(--sea-soft);border-left:4px solid var(--sea);
+    border-radius:0 8px 8px 0;padding:14px 16px;margin:14px 0;font-size:14.5px;}
+  .note b{display:block;margin-bottom:3px;}
+
+  /* ---------- visit ---------- */
+  .vhero{background:var(--navy);color:#EAF3F6;border-radius:12px;padding:26px 22px;margin:20px 0 6px;}
+  .vhero .eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:#F2D9A2;margin-bottom:8px;}
+  .vhero h2{font-family:"Newsreader",Georgia,serif;font-weight:700;font-size:clamp(26px,5vw,36px);
+    line-height:1.08;margin-bottom:10px;}
+  .vhero p{color:#C4DAE3;max-width:56ch;margin-bottom:0;}
+  .photo{background:var(--surface-2);border:2px dashed var(--rule);border-radius:10px;
+    padding:18px;text-align:center;color:var(--ink-3);font-size:13.5px;margin:12px 0;}
+  .photo b{display:block;color:var(--ink-2);font-size:14px;margin-bottom:3px;}
+  .place{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow);}
+  .place h4{font-family:"Newsreader",Georgia,serif;font-size:19px;font-weight:700;margin-bottom:2px;}
+  .place .where{font-size:12.5px;color:var(--ink-3);letter-spacing:.05em;
+    text-transform:uppercase;font-weight:600;margin-bottom:8px;}
+  .place p{font-size:15px;margin-bottom:8px;}
+  .place p:last-child{margin-bottom:0;}
+  .care{background:var(--good-soft);border-left:4px solid var(--good);border-radius:0 8px 8px 0;
+    padding:14px 16px;margin:14px 0;font-size:14.5px;}
+  .care b{display:block;margin-bottom:4px;color:var(--good);}
+  /* ---------- livelihood ---------- */
+  .reg{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:17px 19px;margin-bottom:11px;box-shadow:var(--shadow);}
+  .reg h4{font-family:"Newsreader",Georgia,serif;font-size:19px;font-weight:700;margin-bottom:3px;}
+  .reg .who{font-size:12.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+    color:var(--sea);margin-bottom:8px;}
+  .reg p{font-size:15px;margin-bottom:8px;}
+  .reg p:last-child{margin-bottom:0;}
+  .why{background:var(--good-soft);border-left:4px solid var(--good);border-radius:0 8px 8px 0;
+    padding:9px 13px;font-size:14.5px;color:var(--ink-2);margin:8px 0 0;}
+  .why b{color:var(--good);display:block;margin-bottom:2px;font-size:13px;
+    letter-spacing:.06em;text-transform:uppercase;}
+
+  /* ---------- health + barangays ---------- */
+  .sched{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    overflow:hidden;box-shadow:var(--shadow);margin-bottom:12px;}
+  .sched .hd{background:var(--surface-2);padding:10px 16px;font-size:11px;font-weight:700;
+    letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);}
+  .sched .rw{display:flex;gap:14px;padding:12px 16px;border-top:1px solid var(--rule-soft);
+    font-size:15.5px;align-items:baseline;flex-wrap:wrap;}
+  .sched .day{flex:none;width:132px;font-weight:700;color:var(--sea);font-size:14.5px;}
+  .sched .what{flex:1;min-width:180px;}
+  .brgytbl{overflow-x:auto;border:1px solid var(--rule);background:var(--surface);
+    border-radius:10px;box-shadow:var(--shadow);margin-bottom:12px;}
+  .brgytbl table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px;}
+  .brgytbl th,.brgytbl td{text-align:left;padding:10px 13px;border-bottom:1px solid var(--rule-soft);vertical-align:top;}
+  .brgytbl thead th{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--ink-3);font-weight:700;background:var(--surface-2);border-bottom:1px solid var(--rule);}
+  .brgytbl tbody tr:last-child td{border-bottom:0;}
+  .brgytbl td.nm{font-weight:600;white-space:nowrap;}
+  .pobl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    background:var(--sea-soft);color:var(--sea);padding:2px 7px;border-radius:4px;}
+
+  /* ---------- away + feedback ---------- */
+  .route{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:16px 18px;margin-bottom:10px;box-shadow:var(--shadow);
+    display:flex;gap:14px;align-items:flex-start;}
+  .route .num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--sea);
+    color:var(--on-sea);display:grid;place-items:center;font-weight:700;font-size:15px;}
+  .route b{display:block;font-size:16.5px;margin-bottom:3px;}
+  .route p{font-size:14.5px;color:var(--ink-2);margin:0 0 5px;}
+  .route p:last-child{margin-bottom:0;}
+  .letter{background:var(--surface-2);border:1px dashed var(--ink-3);border-radius:10px;
+    padding:18px 20px;margin:14px 0;font-family:"Public Sans",sans-serif;
+    font-size:14.5px;line-height:1.7;white-space:pre-wrap;}
+  .letter .fill{background:var(--gold-soft);color:var(--gold);border-bottom:1px solid var(--gold);
+    padding:0 4px;font-weight:600;}
+  .esc{counter-reset:esc;list-style:none;padding-left:0;margin:0;}
+  .esc li{counter-increment:esc;position:relative;padding-left:44px;margin-bottom:14px;}
+  .esc li:before{content:counter(esc);position:absolute;left:0;top:0;
+    width:30px;height:30px;border-radius:50%;background:var(--sea-soft);color:var(--sea);
+    display:grid;place-items:center;font-weight:700;font-size:15px;}
+  .esc li b{display:block;font-size:16.5px;margin-bottom:2px;}
+  .esc li span{font-size:14.5px;color:var(--ink-2);}
+
+  /* ---------- storm ---------- */
+  .status{border:2px solid var(--good);background:var(--good-soft);border-radius:10px;
+    padding:18px 20px;margin:18px 0;}
+  .status .lbl{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--good);margin-bottom:6px;}
+  .status h4{font-family:"Newsreader",Georgia,serif;font-size:22px;font-weight:700;margin-bottom:6px;}
+  .status p{margin-bottom:0;font-size:15.5px;}
+  .srcbox{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:6px 18px;margin-bottom:12px;box-shadow:var(--shadow);}
+  .srclink{display:flex;gap:14px;align-items:baseline;padding:13px 0;
+    border-bottom:1px solid var(--rule-soft);flex-wrap:wrap;}
+  .srclink:last-child{border-bottom:0;}
+  .srclink a{font-weight:700;font-size:16px;text-decoration:none;}
+  .srclink a:hover{text-decoration:underline;}
+  .srclink span{font-size:13.5px;color:var(--ink-2);flex:1;min-width:190px;}
+  .ext{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-3);border:1px solid var(--rule);border-radius:4px;padding:2px 6px;}
+  .gobag{columns:2;column-gap:22px;}
+  .gobag li{break-inside:avoid;margin-bottom:6px;}
+  @media (max-width:520px){ .gobag{columns:1;} }
+
+  /* ---------- contact ---------- */
+  .ccard{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:18px 20px;margin-bottom:12px;box-shadow:var(--shadow);}
+  .ccard h4{font-family:"Newsreader",Georgia,serif;font-size:19px;font-weight:700;margin-bottom:8px;}
+  .addr{font-size:17px;line-height:1.7;}
+  .addr strong{display:block;font-size:18px;}
+  .tbc{display:inline-block;background:var(--gold-soft);color:var(--gold);
+    border:1px solid var(--gold);border-radius:5px;padding:2px 8px;
+    font-size:12.5px;font-weight:700;letter-spacing:.04em;}
+  .gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);
+    border-radius:8px;overflow:hidden;margin:8px 0 12px;}
+  .gloss div{background:var(--surface);padding:9px 11px;}
+  .gloss b{display:block;color:var(--sea);font-size:14.5px;line-height:1.25;}
+  .gloss span{display:block;font-size:12.5px;color:var(--ink-3);margin-top:2px;}
+  .wr{display:inline-block;font-weight:600;font-style:italic;color:var(--sea);
+    font-size:.86em;letter-spacing:.01em;margin-left:8px;text-transform:none;}
+  .wrline{display:block;font-weight:600;font-style:italic;color:var(--sea);
+    font-size:.88em;margin-top:3px;text-transform:none;letter-spacing:.01em;}
+  .crow{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid var(--rule-soft);
+    font-size:15.5px;align-items:baseline;flex-wrap:wrap;}
+  .crow:last-child{border-bottom:0;}
+  .crow .k{flex:none;width:150px;font-weight:600;color:var(--ink-2);font-size:14px;}
+  .crow .v{flex:1;min-width:180px;}
+  .maplink{display:inline-block;margin-top:8px;font-weight:600;}
+
+  /* ---------- news ---------- */
+  .post{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:15px 17px;margin-bottom:10px;box-shadow:var(--shadow);}
+  .post b{display:block;font-family:"Newsreader",Georgia,serif;font-size:18px;
+    font-weight:700;line-height:1.2;margin-bottom:5px;}
+  .post .byline{font-size:12.5px;color:var(--ink-3);letter-spacing:.03em;margin-bottom:7px;}
+  .post .byline strong{color:var(--ink-2);font-weight:600;}
+  .post p{font-size:14.5px;color:var(--ink-2);margin:0;}
+  .prov{background:var(--sea-soft);border:1px solid var(--sea);border-radius:10px;
+    padding:16px 18px;margin:18px 0 4px;}
+  .prov .lbl{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--sea);margin-bottom:7px;}
+  .prov p{font-size:14.5px;color:var(--ink-2);margin-bottom:9px;}
+  .prov ul{margin:0 0 8px;padding-left:18px;}
+  .prov li{margin-bottom:6px;font-size:15px;}
+  .prov li span{display:block;font-size:12px;color:var(--ink-3);}
+  .prov .fine{font-size:12.5px;color:var(--ink-3);margin:0;}
+
+  /* ---------- issuances ---------- */
+  .filters{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 6px;}
+  .filters button{background:var(--surface);border:1px solid var(--rule);border-radius:999px;
+    padding:7px 14px;font-size:13.5px;font-weight:600;color:var(--ink-2);cursor:pointer;}
+  .filters button[aria-pressed="true"]{background:var(--sea);border-color:var(--sea);color:var(--on-sea);}
+  .yearsel{display:flex;align-items:center;gap:8px;margin:8px 0 4px;font-size:14px;color:var(--ink-2);}
+  .yearsel select{padding:8px 10px;border:1px solid var(--rule);border-radius:8px;
+    background:var(--surface);color:var(--ink);font-family:inherit;font-size:14.5px;}
+  .iss{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:14px 16px;margin-bottom:9px;box-shadow:var(--shadow);
+    display:flex;gap:14px;align-items:flex-start;}
+  .iss .badge{flex:none;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    padding:4px 9px;border-radius:5px;background:var(--sea-soft);color:var(--sea);white-space:nowrap;}
+  .iss .badge.eo{background:var(--gold-soft);color:var(--gold);}
+  .iss .badge.adv{background:var(--alert-soft);color:var(--alert);}
+  .iss .body b{display:block;font-size:15.5px;margin-bottom:2px;}
+  .iss .body .no{font-size:12.5px;color:var(--ink-3);font-weight:600;letter-spacing:.03em;}
+  .iss .body p{font-size:14px;color:var(--ink-2);margin:5px 0 6px;}
+  .iss .dl{font-size:13px;font-weight:600;color:var(--sea);}
+  .corner{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--gold);
+    border-radius:0 10px 10px 0;padding:18px 20px;margin:14px 0;box-shadow:var(--shadow);}
+  .corner .lbl{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:6px;}
+  .corner h4{font-family:"Newsreader",Georgia,serif;font-size:20px;font-weight:700;margin-bottom:6px;}
+  .corner p{font-size:15px;}
+  .corner p:last-child{margin-bottom:0;}
+  .morenav{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;
+    padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.18);}
+  .morenav a{color:#EAF3F6;text-decoration:none;font-weight:600;}
+  .morenav a:hover{text-decoration:underline;}
+  .govlinks{border-top:0;margin-top:18px;padding-top:14px;
+    display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;}
+  .govlinks a{color:#9FC3D1;text-decoration:none;}
+  .govlinks a:hover{color:#EAF3F6;text-decoration:underline;}
+  footer.site{background:var(--navy);color:#C4DAE3;margin-top:40px;padding:26px 16px 34px;}
+  .foot-in{max-width:1080px;margin:0 auto;font-size:13.5px;}
+  .foot-in b{color:#EAF3F6;display:block;margin-bottom:5px;font-size:15px;}
+  .foot-in p{margin:0 0 8px;}
+
+  /* ---------- chatbot ---------- */
+  .fab{position:fixed;right:16px;bottom:16px;z-index:70;background:var(--sea);
+    color:var(--on-sea);border:0;border-radius:999px;padding:14px 20px;font-weight:700;
+    font-size:15px;cursor:pointer;box-shadow:0 6px 22px rgba(10,46,62,.3);}
+  .panel{position:fixed;inset:auto 0 0 0;z-index:80;background:var(--surface);
+    border-top:2px solid var(--sea);border-radius:14px 14px 0 0;
+    max-width:520px;margin:0 auto;display:none;flex-direction:column;
+    max-height:82vh;box-shadow:0 -8px 40px rgba(10,46,62,.25);}
+  .panel.on{display:flex;}
+  .p-head{padding:13px 16px;border-bottom:1px solid var(--rule);
+    display:flex;align-items:center;gap:10px;}
+  .p-head b{font-size:15.5px;}
+  .p-head .cls{margin-left:auto;background:none;border:0;font-size:22px;
+    color:var(--ink-3);cursor:pointer;line-height:1;padding:0 4px;}
+  .aidisc{background:var(--gold-soft);border-bottom:1px solid var(--gold);
+    padding:9px 16px;font-size:12.5px;color:var(--ink-2);}
+  .aidisc b{color:var(--gold);}
+  .log{flex:1;overflow-y:auto;padding:14px 16px;display:flex;flex-direction:column;gap:11px;}
+  .msg{max-width:88%;padding:11px 13px;border-radius:12px;font-size:14.8px;line-height:1.5;}
+  .msg.bot{background:var(--surface-2);border-bottom-left-radius:4px;align-self:flex-start;}
+  .msg.me{background:var(--sea);color:var(--on-sea);border-bottom-right-radius:4px;align-self:flex-end;}
+  .msg .src{display:block;margin-top:8px;padding-top:7px;border-top:1px solid var(--rule);
+    font-size:12px;color:var(--ink-3);}
+  .msg .src a{color:var(--sea);font-weight:600;cursor:pointer;text-decoration:underline;}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;padding:0 16px 10px;}
+  .chips button{background:var(--sea-soft);color:var(--sea);border:1px solid var(--sea);
+    border-radius:999px;padding:7px 12px;font-size:13px;font-weight:600;cursor:pointer;}
+  .p-form{display:flex;gap:8px;padding:11px 14px 16px;border-top:1px solid var(--rule);}
+  .p-form input{flex:1;padding:12px 14px;border:2px solid var(--rule);border-radius:9px;
+    font-size:16px;background:var(--ground);color:var(--ink);font-family:inherit;}
+  .p-form input:focus{border-color:var(--sea);outline:none;}
+  .p-form button{background:var(--sea);color:var(--on-sea);border:0;border-radius:9px;
+    padding:0 18px;font-weight:700;cursor:pointer;font-size:15px;}
+
+  @media (max-width:560px){
+    .top h1{font-size:17px;} .seal{width:38px;height:38px;font-size:15px;}
+    .askbtn{padding:8px 13px;font-size:12.5px;}
+  }
+</style>
+
+<div class="proto">PROTOTYPE ONLY <span>&nbsp;·&nbsp; Not the official website of the Municipality of Lapinig. All content below is sample data for review.</span></div>
+
+<header class="top">
+  <div class="top-in">
+    <div class="seal" aria-hidden="true">L</div>
+    <div>
+      <div class="rp">Republic of the Philippines</div>
+      <h1>Municipality of Lapinig</h1>
+      <div class="sub"><a href="https://northernsamar.gov.ph" target="_blank" rel="noopener">Province of Northern Samar</a> &nbsp;·&nbsp; Eastern Visayas</div>
+    </div>
+    <div class="spacer"></div>
+    <button class="askbtn" onclick="openBot()">Ask a question · Pagpakiana</button>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-in" id="nav"><button onclick="go('home')" id="nav-home">Home</button><button onclick="go('services')" id="nav-services">Services</button><button onclick="go('health')" id="nav-health">Health</button><button onclick="go('livelihood')" id="nav-livelihood">Farming &amp; Fishing</button><button onclick="go('storm')" id="nav-storm">Storm &amp; Emergency</button><button onclick="go('away')" id="nav-away">Away from Home</button><button onclick="go('visit')" id="nav-visit">Visit Lapinig</button><button onclick="go('contact')" id="nav-contact">Contact</button></div>
+</nav>
+
+<main>
+  <!-- ============ HOME ============ -->
+  <section class="page on" id="p-home">
+    <div class="advisory fake">
+      <span class="tag">⚠ Placeholder &nbsp;·&nbsp; this is not a real advisory</span>
+      <p><strong>Nothing is happening. There is no storm.</strong> This grey box only shows where a real advisory would appear, at the very top of the page, above everything else.</p>
+      <div class="when">In the live site this box is empty on a normal day. It fills only when the MDRRM Office posts something. &nbsp;<a href="#" onclick="go('storm');return false;" style="font-weight:700;">Storm and emergency page</a></div>
+    </div>
+    <div class="howworks">
+      <b>How announcements would work</b>
+      Two kinds, kept separate on purpose. <strong>Weather information</strong> can arrive automatically from the PAGASA public feed and would be labelled as coming from PAGASA. <strong>Suspension of classes and work</strong> <em>(Waray Pasok ha Iskoylahan Ngan Trabaho)</em> is never automatic, because only the Mayor can declare it. A named person at the Mayor's Office types it, and their name appears on the notice.
+    </div>
+
+    <div class="mhero" id="mhero">
+      <div class="art" id="heroArt"></div>
+      <div id="heroIsles" hidden=""></div>
+      <div class="in">
+        <div class="sealslot">Municipal<br>seal<br>to be<br>supplied</div>
+        <div>
+          <div class="eyebrow">Republic of the Philippines · Province of Northern Samar</div>
+          <h2>Municipality of Lapinig</h2>
+          <div class="mwr">Munisipyo han Lapinig</div>
+          <p class="strap">The farthest Pacific-facing town in Northern Samar. Everything this office does, what it costs, and how long it takes.</p>
+          <div class="mfacts"><span>15 barangays</span><span>11,908 residents</span><span>Facing the Pacific</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="mcap" id="heroCap"></p>
+
+    <div class="hero">
+      <h2>What do you need from the municipal hall today?</h2>
+      <p>Type what you are looking for, in English or Waray. Tagalog words still find the right page. Every service below lists exactly what to bring, what it costs, and how long it takes.</p>
+      <div class="searchwrap">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input id="q" type="search" placeholder="birth certificate, business permit, senior ID..." autocomplete="off" aria-label="Search services / Pamilingan">
+      </div>
+      <p class="hint">Search · <em>Pamilingan</em>. Try: <em>sedula</em>, <em>tigurang</em>, <em>buwis</em>, <em>klirans</em></p>
+    </div>
+
+    <div id="results"></div>
+
+    <div id="homeblocks">
+      <div class="tiles">
+        <button class="tile" onclick="go('services')"><div class="ic c3">📋</div><div><b>All services</b><span>Requirements, fees and processing time for everything this office does</span></div></button>
+        <button class="tile" onclick="go('charter')"><div class="ic c4">📜</div><div><b>Citizen's Charter</b><span>The full printable version, as required by RA 11032</span></div></button>
+        <button class="tile" onclick="go('transparency')"><div class="ic c5">🔎</div><div><b>Transparency</b><span>Budget, financial reports and procurement</span></div></button>
+        <button class="tile" onclick="go('officials')"><div class="ic c3">🏛️</div><div><b>Officials and offices</b><span>Who to see, where they are, and office hours</span></div></button>
+        <button class="tile" onclick="go('livelihood')"><div class="ic c2">🌴</div><div><b>Farming and fishing</b><span>The registrations that decide who gets government assistance</span></div></button>
+        <button class="tile" onclick="go('health')"><div class="ic c1">🩺</div><div><b>Health services</b><span>Schedule, what the health unit does, and what to bring</span></div></button>
+        <button class="tile" onclick="go('barangays')"><div class="ic c6">🏘️</div><div><b>The 15 barangays</b><span>Your captain, your hall, and what your barangay handles</span></div></button>
+        <button class="tile" onclick="go('away')"><div class="ic c5">✈️</div><div><b>Away from home?</b><span>How to get a document from Lapinig when you cannot come for it</span></div></button>
+        <button class="tile" onclick="go('storm')"><div class="ic cw">🌀</div><div><b>Storm and emergency</b><span>Forecasts, evacuation centres, go-bag list and who to call</span></div></button>
+        <button class="tile" onclick="go('contact')"><div class="ic c1">📍</div><div><b>Contact and location</b><span>Where the municipal hall is, office hours, and how to reach each office</span></div></button>
+        <button class="tile" onclick="go('issuances')"><div class="ic c4">📄</div><div><b>Issuances</b><span>Ordinances, resolutions, executive orders and advisories by year</span></div></button>
+        <button class="tile" onclick="go('visit')"><div class="ic c2">🏝️</div><div><b>Visit Lapinig</b><span>Canawayon Island, the coast, and how to get here</span></div></button>
+      </div>
+
+      <div class="corner">
+        <div class="lbl">The Mayor's Corner</div>
+        <h4>A message from the Mayor</h4>
+        <p>Sample placeholder. In the live site this is where the Mayor speaks directly to residents, in his own words, a few times a year. Short pieces, signed and dated.</p>
+        <p style="font-size:13.5px;color:var(--ink-3);margin-bottom:0;">Romualdo "Don Don" A. Menzon Jr., Municipal Mayor</p>
+      </div>
+
+      <h3 class="sec">Latest from the Municipality <span class="wrline">Mga Pahibaro</span></h3>
+      <p class="seclead">Every post carries the name of the person who wrote it and the date it was published. Sample entries.</p>
+      <div id="newslist"><div class="post">
+  <b>Municipal hall services resume after weekend maintenance</b>
+  <div class="byline">By <strong>Office of the Municipal Administrator</strong> &nbsp;·&nbsp; 2 September 2026 &nbsp;·&nbsp; Lapinig, Northern Samar</div>
+  <p>Sample post. All frontline windows are open on the regular schedule, 8:00 AM to 5:00 PM with no noon break.</p></div><div class="post">
+  <b>Barangay officials complete disaster preparedness refresher</b>
+  <div class="byline">By <strong>MDRRM Office</strong> &nbsp;·&nbsp; 27 August 2026 &nbsp;·&nbsp; Lapinig, Northern Samar</div>
+  <p>Sample post. Representatives from all 15 barangays reviewed evacuation procedures ahead of the season.</p></div><div class="post">
+  <b>Business permit renewal reminders begin this quarter</b>
+  <div class="byline">By <strong>Business Permits and Licensing Office</strong> &nbsp;·&nbsp; 15 August 2026 &nbsp;·&nbsp; Lapinig, Northern Samar</div>
+  <p>Sample post. Renewal runs 1 to 20 January. Requirements are listed on the service page so nobody arrives short a document.</p></div></div>
+
+      <div class="prov">
+        <div class="lbl">Lapinig in the provincial news</div>
+        <p>The Province of Northern Samar writes about Lapinig. Rather than rewrite those stories here, we link to them.</p>
+        <ul>
+          <li><a href="https://northernsamar.gov.ph/%F0%9D%90%8B%F0%9D%90%9A%F0%9D%90%A9%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%A0-%F0%9D%90%9A-%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%9D%F0%9D%90%9D%F0%9D%90%9E%F0%9D%90%A7-%F0%9D%90%A0%F0%9D%90%9E/" target="_blank" rel="noopener">Lapinig: a hidden gem in Northern Samar's Pacific Coast</a> <span>Province of Northern Samar · provincial website</span></li>
+          <li><a href="https://northernsamar.gov.ph/private-sector-groups-join-government-and-non-government-organizations-in-bringing-the-31st-kauswagan-caravan-to-the-farthest-pacific-town-of-northern-samar-lapinig/" target="_blank" rel="noopener">Private sector groups join government and non-government organizations in bringing the 31st Kauswagan Caravan to the farthest Pacific town of Northern Samar, Lapinig</a> <span>Province of Northern Samar · provincial website</span></li>
+          <li><a href="https://www.facebook.com/PGNS.Official/posts/1088419543315309/" target="_blank" rel="noopener">Canawayon Island, Northern Samar's hidden paradise</a> <span>Province of Northern Samar · official Facebook page</span></li>
+        </ul>
+        <p class="fine">These are the real provincial articles. They open on the province's own website, which is the point: the town does not rewrite what the province has already published.</p>
+      </div>
+
+      <h3 class="sec">Most asked this month</h3>
+      <p class="seclead">Based on what people search for here. In a live site this list would reorder itself.</p>
+      <div id="popular"><button class="svc" onclick="detail('birth')">
+    <b>Certified copy of a birth certificate</b>
+    <span class="alt">Kopya han birth certificate</span>
+    <span class="meta">
+      <span class="pill office">Local Civil Registry</span>
+      <span class="pill time">7 working days</span>
+      <span class="pill fee">Php 130 (sample)</span>
+    </span></button><button class="svc" onclick="detail('bizr')">
+    <b>Business permit, renewal</b>
+    <span class="alt">Permiso Pagnegosyo, pag-bag-o</span>
+    <span class="meta">
+      <span class="pill office">Business Permits and Licensing</span>
+      <span class="pill time">3 working days</span>
+      <span class="pill fee">Varies by gross receipts</span>
+    </span></button><button class="svc" onclick="detail('senior')">
+    <b>Senior citizen ID</b>
+    <span class="alt">ID han Tigurang</span>
+    <span class="meta">
+      <span class="pill office">OSCA, Mayor's Office</span>
+      <span class="pill time">3 working days</span>
+      <span class="pill fee">Free</span>
+    </span></button><button class="svc" onclick="detail('rpt')">
+    <b>Real property tax payment</b>
+    <span class="alt">Buwis ha tuna</span>
+    <span class="meta">
+      <span class="pill office">Treasurer's Office</span>
+      <span class="pill time">Same day</span>
+      <span class="pill fee">Based on assessment</span>
+    </span></button><button class="svc" onclick="detail('cedula')">
+    <b>Community tax certificate (cedula)</b>
+    <span class="alt">Sedula</span>
+    <span class="meta">
+      <span class="pill office">Treasurer's Office</span>
+      <span class="pill time">Same day</span>
+      <span class="pill fee">Php 5 and up (sample)</span>
+    </span></button></div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="page" id="p-services">
+    <h3 class="sec">All services <span class="wrline">Mga serbisyo</span></h3>
+    <p class="seclead">Everything a resident or business can ask this municipality for. Each one shows what to bring, the fee, the steps and the legal processing time.</p>
+    <div class="searchwrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+      <input id="q2" type="search" placeholder="Filter services..." autocomplete="off" aria-label="Filter services">
+    </div>
+    <div id="alllist"><button class="svc" onclick="detail('biz')">
+    <b>Business permit, new</b>
+    <span class="alt">Permiso Pagnegosyo, bag-o</span>
+    <span class="meta">
+      <span class="pill office">Business Permits and Licensing</span>
+      <span class="pill time">3 working days</span>
+      <span class="pill fee">Varies by capital</span>
+    </span></button><button class="svc" onclick="detail('bizr')">
+    <b>Business permit, renewal</b>
+    <span class="alt">Permiso Pagnegosyo, pag-bag-o</span>
+    <span class="meta">
+      <span class="pill office">Business Permits and Licensing</span>
+      <span class="pill time">3 working days</span>
+      <span class="pill fee">Varies by gross receipts</span>
+    </span></button><button class="svc" onclick="detail('birth')">
+    <b>Certified copy of a birth certificate</b>
+    <span class="alt">Kopya han birth certificate</span>
+    <span class="meta">
+      <span class="pill office">Local Civil Registry</span>
+      <span class="pill time">7 working days</span>
+      <span class="pill fee">Php 130 (sample)</span>
+    </span></button><button class="svc" onclick="detail('death')">
+    <b>Death certificate registration</b>
+    <span class="alt">Rehistro han Pagkamatay</span>
+    <span class="meta">
+      <span class="pill office">Local Civil Registry</span>
+      <span class="pill time">7 working days</span>
+      <span class="pill fee">Free within 30 days</span>
+    </span></button><button class="svc" onclick="detail('marr')">
+    <b>Marriage license application</b>
+    <span class="alt">Lisensiya Pagpakasal</span>
+    <span class="meta">
+      <span class="pill office">Local Civil Registry</span>
+      <span class="pill time">10 days posting, then release</span>
+      <span class="pill fee">Php 200 (sample)</span>
+    </span></button><button class="svc" onclick="detail('senior')">
+    <b>Senior citizen ID</b>
+    <span class="alt">ID han Tigurang</span>
+    <span class="meta">
+      <span class="pill office">OSCA, Mayor's Office</span>
+      <span class="pill time">3 working days</span>
+      <span class="pill fee">Free</span>
+    </span></button><button class="svc" onclick="detail('pwd')">
+    <b>PWD identification card</b>
+    <span class="alt">ID han PWD</span>
+    <span class="meta">
+      <span class="pill office">MSWDO</span>
+      <span class="pill time">3 working days</span>
+      <span class="pill fee">Free</span>
+    </span></button><button class="svc" onclick="detail('indig')">
+    <b>Certificate of indigency</b>
+    <span class="alt">Sertipiko han pagkapobre</span>
+    <span class="meta">
+      <span class="pill office">MSWDO</span>
+      <span class="pill time">1 working day</span>
+      <span class="pill fee">Free</span>
+    </span></button><button class="svc" onclick="detail('rpt')">
+    <b>Real property tax payment</b>
+    <span class="alt">Buwis ha tuna</span>
+    <span class="meta">
+      <span class="pill office">Treasurer's Office</span>
+      <span class="pill time">Same day</span>
+      <span class="pill fee">Based on assessment</span>
+    </span></button><button class="svc" onclick="detail('rptc')">
+    <b>Real property tax clearance</b>
+    <span class="alt">Tax Klirans</span>
+    <span class="meta">
+      <span class="pill office">Treasurer's Office</span>
+      <span class="pill time">3 working days</span>
+      <span class="pill fee">Php 100 (sample)</span>
+    </span></button><button class="svc" onclick="detail('bldg')">
+    <b>Building permit</b>
+    <span class="alt">Permit ha Pagbalay</span>
+    <span class="meta">
+      <span class="pill office">Municipal Engineering Office</span>
+      <span class="pill time">20 working days</span>
+      <span class="pill fee">Based on floor area</span>
+    </span></button><button class="svc" onclick="detail('cedula')">
+    <b>Community tax certificate (cedula)</b>
+    <span class="alt">Sedula</span>
+    <span class="meta">
+      <span class="pill office">Treasurer's Office</span>
+      <span class="pill time">Same day</span>
+      <span class="pill fee">Php 5 and up (sample)</span>
+    </span></button></div>
+  </section>
+
+  <!-- ============ DETAIL ============ -->
+  <section class="page" id="p-detail">
+    <button class="back" onclick="goBack()">← Back</button>
+    <div id="detail"></div>
+  </section>
+
+  <!-- ============ ISSUANCES ============ -->
+  <section class="page" id="p-issuances">
+    <h3 class="sec">Issuances</h3>
+    <p class="seclead">Ordinances, resolutions, executive orders and advisories, filed by type and by year. Every issuance keeps its number, its date and its file, so it can still be found in ten years.</p>
+    <div class="howworks">
+      <b>Filed by what it is, not by which office made it</b>
+      Residents and staff rarely know which office issues what. They know they are looking for an ordinance about garbage, or the executive order from last March. So the filing follows the document, not the org chart.
+    </div>
+
+    <div class="filters" id="issfilters"><button onclick="setIssType('All')" aria-pressed="true" id="ift-All">All</button><button onclick="setIssType('Ordinance')" aria-pressed="false" id="ift-Ordinance">Ordinance</button><button onclick="setIssType('Resolution')" aria-pressed="false" id="ift-Resolution">Resolution</button><button onclick="setIssType('Executive Order')" aria-pressed="false" id="ift-ExecutiveOrder">Executive Order</button><button onclick="setIssType('Advisory')" aria-pressed="false" id="ift-Advisory">Advisory</button></div>
+    <div class="yearsel">
+      <label for="issyear">Year</label>
+      <select id="issyear"><option>All</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option></select>
+      <span id="isscount" style="margin-left:auto;font-size:13px;color:var(--ink-3);">12 issuances</span>
+    </div>
+    <div class="searchwrap" style="margin-top:10px;">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+      <input id="issq" type="search" placeholder="Search issuances by subject or number..." autocomplete="off" aria-label="Search issuances">
+    </div>
+    <div id="isslist" style="margin-top:12px;"><div class="iss">
+        <span class="badge eo">Executive Order</span>
+        <div class="body">
+          <b>Adopting a policy on the responsible use of artificial intelligence tools</b>
+          <span class="no">EO 2026-07 · 1 September 2026</span>
+          <p>Sample entry. Constitutes the AI Oversight Committee and sets permitted and prohibited uses.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div><div class="iss">
+        <span class="badge adv">Advisory</span>
+        <div class="body">
+          <b>Suspension of work due to weather, all offices</b>
+          <span class="no">ADV 2026-11 · 30 August 2026</span>
+          <p>Sample entry. Advisories stay in the archive after they expire, so the record of what was declared remains.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div><div class="iss">
+        <span class="badge">Resolution</span>
+        <div class="body">
+          <b>Accepting a donation of professional services for records digitisation</b>
+          <span class="no">Res. 2026-31 · 18 August 2026</span>
+          <p>Sample entry. The form of resolution used when the Municipality accepts pro bono assistance.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div><div class="iss">
+        <span class="badge">Ordinance</span>
+        <div class="body">
+          <b>Regulating the use of single-use plastics in public markets</b>
+          <span class="no">Ord. 2026-04 · 14 July 2026</span>
+          <p>Sample entry. Sets a phase-out schedule and penalties for the public market and municipal buildings.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div><div class="iss">
+        <span class="badge">Resolution</span>
+        <div class="body">
+          <b>Requesting DPWH action on the Lapinig to Arteche road section</b>
+          <span class="no">Res. 2026-22 · 2 June 2026</span>
+          <p>Sample entry. Reiterates the request for the 24 km stretch identified as the town's main constraint.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div><div class="iss">
+        <span class="badge eo">Executive Order</span>
+        <div class="body">
+          <b>Designating the municipal website administrator and alternate</b>
+          <span class="no">EO 2026-05 · 20 May 2026</span>
+          <p>Sample entry. Names who maintains the site and sets the six-month content review.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div><div class="iss">
+        <span class="badge">Ordinance</span>
+        <div class="body">
+          <b>Revised schedule of fees for municipal certifications</b>
+          <span class="no">Ord. 2026-02 · 9 March 2026</span>
+          <p>Sample entry. Amends the fees listed in the Citizen's Charter for barangay and business clearances.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div><div class="iss">
+        <span class="badge">Ordinance</span>
+        <div class="body">
+          <b>Establishing the Canawayon Island protection zone</b>
+          <span class="no">Ord. 2025-09 · 11 November 2025</span>
+          <p>Sample entry. Restricts extraction and clearing on the island that shields the poblacion from the open sea.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div><div class="iss">
+        <span class="badge">Resolution</span>
+        <div class="body">
+          <b>Adopting the Annual Investment Program for fiscal year 2026</b>
+          <span class="no">Res. 2025-44 · 7 October 2025</span>
+          <p>Sample entry. The measure adopted each October alongside the executive budget.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div><div class="iss">
+        <span class="badge">Ordinance</span>
+        <div class="body">
+          <b>Municipal solid waste management ordinance</b>
+          <span class="no">Ord. 2024-06 · 22 July 2024</span>
+          <p>Sample entry. Superseded in part by Ord. 2026-04. Kept in the archive with its status shown.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div><div class="iss">
+        <span class="badge">Resolution</span>
+        <div class="body">
+          <b>Authorising the Mayor to enter into an agreement with the provincial government</b>
+          <span class="no">Res. 2024-18 · 15 May 2024</span>
+          <p>Sample entry.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div><div class="iss">
+        <span class="badge eo">Executive Order</span>
+        <div class="body">
+          <b>Reorganising the Municipal Disaster Risk Reduction and Management Council</b>
+          <span class="no">EO 2023-02 · 27 February 2023</span>
+          <p>Sample entry.</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div></div>
+
+    <div class="note"><b>Sample entries</b>
+    The issuances below are invented for the prototype. In the live site each row links to the actual signed PDF, and the list is built from the ordinance index spreadsheet, so a measure marked repealed drops out of the active view by itself.</div>
+  </section>
+
+  <!-- ============ CHARTER ============ -->
+  <section class="page" id="p-charter">
+    <h3 class="sec">Citizen's Charter</h3>
+    <p class="seclead">Published under Republic Act 11032, the Ease of Doing Business and Efficient Government Service Delivery Act. It lists every service, its requirements, fees, steps, processing time and the officer responsible.</p>
+    <div class="note">
+      <b>Same source as the service pages</b>
+      This charter and every service page on this site are generated from one approved list. Change a fee in that list and both update together, so the website can never disagree with the printed charter.
+    </div>
+    <div class="card">
+      <h4>Processing time standards</h4>
+      <div class="rowlist" style="margin:10px 0 0;box-shadow:none;">
+        <div class="r"><span class="n">Simple transactions</span><span class="v">3 working days</span></div>
+        <div class="r"><span class="n">Complex transactions</span><span class="v">7 working days</span></div>
+        <div class="r"><span class="n">Highly technical transactions</span><span class="v">20 working days</span></div>
+      </div>
+      <p class="small" style="margin-top:12px;">If a service here takes longer than the standard, it is marked on its page. We publish that rather than hide it.</p>
+    </div>
+    <div class="card">
+      <h4>Anti Red Tape</h4>
+      <p class="small">No fixers. No extra fees beyond those published here. If you are asked for anything not listed on a service page, report it to the Municipal Administrator, or through the feedback details on this page. <em>Sample text for the prototype.</em></p>
+    </div>
+    <h3 class="sec">Download</h3>
+    <div class="card"><p class="small">The full Citizen's Charter as a printable PDF would sit here, generated automatically from the same list. Sample only.</p></div>
+  </section>
+
+  <!-- ============ TRANSPARENCY ============ -->
+  <section class="page" id="p-transparency">
+    <h3 class="sec">Transparency</h3>
+    <p class="seclead">Posted under the DILG Full Disclosure Policy. These documents are also displayed on the bulletin board at the municipal hall and in the two poblacion barangays.</p>
+    <div class="rowlist">
+      <div class="r"><span class="n">Annual Budget</span><span class="v">Sample · posted quarterly</span></div>
+      <div class="r"><span class="n">Statement of Receipts and Expenditures</span><span class="v">Sample · quarterly</span></div>
+      <div class="r"><span class="n">Annual Procurement Plan</span><span class="v">Sample · yearly</span></div>
+      <div class="r"><span class="n">Bid results and awarded contracts</span><span class="v">Sample · as awarded</span></div>
+      <div class="r"><span class="n">Annual Investment Program</span><span class="v">Sample · yearly</span></div>
+      <div class="r"><span class="n">20% Development Fund utilization</span><span class="v">Sample · quarterly</span></div>
+      <div class="r"><span class="n">Local Disaster Risk Reduction Fund</span><span class="v">Sample · quarterly</span></div>
+      <div class="r"><span class="n">Report of Special Education Fund</span><span class="v">Sample · quarterly</span></div>
+    </div>
+    <div class="note"><b>Why this page is short</b>
+    A transparency page works when documents actually appear on schedule. In the live site each row would be linked to the file and stamped with the date it was posted, so anyone can see at a glance what is current and what is late.</div>
+
+    <h3 class="sec">Freedom of Information</h3>
+    <p class="seclead">Under Executive Order No. 2, series of 2016.</p>
+    <div class="card">
+      <h4>How to request information</h4>
+      <ol class="steps">
+        <li>Write your request, or fill the request form at the Mayor's Office.</li>
+        <li>Bring a valid ID. Say clearly which document or information you need.</li>
+        <li>The receiving officer logs your request and gives you a reference number.</li>
+        <li>You get a response within 15 working days. If more time is needed, you are told why.</li>
+      </ol>
+      <p class="small" style="margin-top:10px;">Receiving officer: <em>name and position, sample</em> · Appeals go to the Municipal Mayor.</p>
+    </div>
+  </section>
+
+  <!-- ============ OFFICIALS ============ -->
+  <section class="page" id="p-officials">
+    <h3 class="sec">Officials</h3>
+    <p class="seclead">Elected officials for the 2025 to 2028 term, from the published election results. Sample presentation.</p>
+    <div class="rowlist">
+      <div class="r"><span class="n">Romualdo "Don Don" A. Menzon Jr.</span><span class="v">Municipal Mayor</span></div>
+      <div class="r"><span class="n">Dr. Ma. Luisa "Babie" A. Menzon</span><span class="v">Municipal Vice Mayor</span></div>
+      <div class="r"><span class="n">Analiza I. Gabilan</span><span class="v">Sangguniang Bayan Member</span></div>
+      <div class="r"><span class="n">Lucia L. Gabay</span><span class="v">Sangguniang Bayan Member</span></div>
+      <div class="r"><span class="n">Bartolome P. Mengote</span><span class="v">Sangguniang Bayan Member</span></div>
+      <div class="r"><span class="n">Ruby Q. Delmonte</span><span class="v">Sangguniang Bayan Member</span></div>
+      <div class="r"><span class="n">Annde P. Openia</span><span class="v">Sangguniang Bayan Member</span></div>
+      <div class="r"><span class="n">Carlito O. Morallos</span><span class="v">Sangguniang Bayan Member</span></div>
+      <div class="r"><span class="n">Vivian M. Rongcales</span><span class="v">Sangguniang Bayan Member</span></div>
+      <div class="r"><span class="n">Edmundo M. Hermano</span><span class="v">Sangguniang Bayan Member</span></div>
+    </div>
+
+    <h3 class="sec">Department heads</h3>
+    <p class="seclead">Office hours 8:00 AM to 5:00 PM, Monday to Friday, no noon break.</p>
+    <div class="note" style="background:var(--gold-soft);border-left-color:var(--gold);">
+      <b>Names still needed</b>
+      Appointed department heads are not in any public record we could check, so every name below says "To be confirmed" rather than a guess. Give the twelve names and they appear here immediately.
+    </div>
+    <div class="rowlist" id="offices"><div class="r"><span class="n">Municipal Administrator</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div><div class="r"><span class="n">Secretary to the Sangguniang Bayan</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div><div class="r"><span class="n">Municipal Planning and Development Coordinator</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div><div class="r"><span class="n">Municipal Treasurer</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div><div class="r"><span class="n">Municipal Assessor</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div><div class="r"><span class="n">Local Civil Registrar</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div><div class="r"><span class="n">Municipal Social Welfare and Development Officer</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div><div class="r"><span class="n">Municipal Health Officer</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div><div class="r"><span class="n">Municipal Engineer</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div><div class="r"><span class="n">MDRRM Officer</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div><div class="r"><span class="n">Business Permits and Licensing Officer</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div><div class="r"><span class="n">MLGOO, DILG</span><span class="v" style="color:var(--gold);font-weight:600;">To be confirmed</span></div></div>
+
+    <h3 class="sec">The 15 barangays</h3>
+    <div class="brgy">
+      <span>Alang-alang</span><span>Bagacay</span><span>Cahagwayan</span><span>Can Maria</span>
+      <span>Can Omanio</span><span>Imelda</span><span>Lapinig del Norte</span><span>Lapinig del Sur</span>
+      <span>Lo-ok</span><span>Mabini</span><span>May-igot</span><span>Palanas</span>
+      <span>Pio del Pilar</span><span>Potong</span><span>Potong del Sur</span>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section class="page" id="p-visit">
+    <div class="vhero">
+      <div class="eyebrow">Visit Lapinig</div>
+      <h2>The last town on the Pacific side</h2>
+      <p>Lapinig sits at the far eastern edge of Northern Samar, facing open ocean. Most people who come here were not passing by. They came on purpose, and the town is still quiet enough to be worth the trip.</p>
+    </div>
+    <p class="seclead" style="margin-top:14px;">Sample content for the prototype. Every photo box below is empty on purpose, marked with the picture that belongs there.</p>
+
+    <h3 class="sec">Canawayon Island</h3>
+    <div class="place">
+      <h4>The island you can walk to</h4>
+      <div class="where">Off the poblacion · visible from the municipal grounds</div>
+      <div class="photo"><b>Photo needed</b>Canawayon Island seen across the water from the municipal grounds, ideally at low tide</div>
+      <p>A small island lying just off the town, close enough to see from the municipal hall. At low tide the water between drops away and the crossing becomes shallow. It has long been the town's favourite place for a picnic or an overnight camp, and the provincial government has called it one of Northern Samar's hidden paradises.</p>
+      <p>It is also the reason parts of the town are still standing. Canawayon breaks the force of the Pacific before it reaches the shore. When the 2011 tsunami alert came, the island and the seawall together took the worst of it, and the mayor at the time asked that the island be preserved for exactly that reason.</p>
+      <p><strong>Before you go:</strong> ask at the municipal hall about tides and boats. There is no ticket office and no schedule. Bring your own water, and bring your rubbish back with you.</p>
+    </div>
+
+    <div class="care">
+      <b>Please treat it as the town's shield, not just a beach</b>
+      Canawayon protects Lapinig from the open ocean. Take nothing from it, leave nothing on it, and do not light fires on the vegetation. The island working properly matters more to this town than any picture of it.
+    </div>
+
+    <h3 class="sec">In town</h3>
+
+    <div class="place">
+      <h4>The seawall and the poblacion shore</h4>
+      <div class="where">Lapinig del Norte and Lapinig del Sur</div>
+      <div class="photo"><b>Photo needed</b>The seawall in the late afternoon, with Canawayon in the distance</div>
+      <p>The shore in front of the town is shallow and calm at low tide, with the seawall running along it. It is where the town gathers in the late afternoon. This is the easiest place in Lapinig to understand why the town is built the way it is.</p>
+    </div>
+
+    <div class="place">
+      <h4>Mabini beach</h4>
+      <div class="where">Barangay Mabini · a short ride from the poblacion</div>
+      <div class="photo"><b>Photo needed</b>The stretch of beach at Mabini, wide shot, morning light</div>
+      <p>An open stretch of sand facing the Pacific, on the road as you come into the municipality. Unbuilt, uncrowded, and pointed straight at the ocean.</p>
+    </div>
+
+    <div class="place">
+      <h4>St. Bonaventure Parish Church</h4>
+      <div class="where">Poblacion</div>
+      <div class="photo"><b>Photo needed</b>The church front, and one detail shot of the old woodwork if any survives</div>
+      <p>The parish church at the centre of town. Like much of Lapinig it has been rebuilt more than once after storms.</p>
+    </div>
+
+    <div class="place">
+      <h4>The old wooden houses</h4>
+      <div class="where">Scattered through the poblacion</div>
+      <div class="photo"><b>Photo needed</b>Two or three of the surviving wooden houses, street level</div>
+      <p>A handful of traditional wooden colonial-era houses are still standing, which is remarkable in a town that faces this much weather. Walk the poblacion slowly and you will find them.</p>
+    </div>
+
+    <h3 class="sec">Getting here</h3>
+    <div class="rowlist">
+      <div class="r"><span class="n">Nearest airport</span><span class="v">Catarman, then overland</span></div>
+      <div class="r"><span class="n">From Catarman</span><span class="v">Long road trip, allow a full day</span></div>
+      <div class="r"><span class="n">From Arteche, Eastern Samar</span><span class="v">About 24 km, roughly half an hour from the provincial boundary</span></div>
+      <div class="r"><span class="n">Local transport</span><span class="v">Habal-habal for the rougher stretches</span></div>
+      <div class="r"><span class="n">Road to Jipapad</span><span class="v">Can be impassable after heavy rain</span></div>
+    </div>
+    <p class="seclead">Lapinig is easier to reach from the Eastern Samar side than from the provincial capital. Times are indicative only and would be confirmed before this page goes live.</p>
+
+    <h3 class="sec">Practical things to know</h3>
+    <div class="place">
+      <p><strong>Where to stay.</strong> There is no hotel row here. Ask at the municipal hall about homestays and what is currently available.</p>
+      <p><strong>Where to eat.</strong> Options in town are limited. Arteche, across the boundary, has more.</p>
+      <p><strong>When to come.</strong> Lapinig gets rain on roughly 251 days of the year. There is no dry season, only drier weeks. Watch the forecast and keep your plans loose.</p>
+      <p><strong>Money and signal.</strong> Bring cash. Do not assume a card, an ATM or a strong signal.</p>
+      <p><strong>Storms.</strong> If an advisory is posted on the home page of this site, do not travel. Nothing here is worth being caught on that road.</p>
+    </div>
+
+    <h3 class="sec">Around Lapinig</h3>
+    <p class="seclead">The whole Pacific coast of Samar rewards a slow trip. Neighbouring towns and their attractions would be listed here with honest travel times, once confirmed locally.</p>
+    <div class="rowlist">
+      <div class="r"><span class="n">Arteche, Eastern Samar</span><span class="v">Nearest town with more services</span></div>
+      <div class="r"><span class="n">Gamay</span><span class="v">Neighbouring municipality to the north</span></div>
+      <div class="r"><span class="n">Jipapad, Eastern Samar</span><span class="v">Inland, road conditions vary</span></div>
+      <div class="r"><span class="n">Northern Samar coast</span><span class="v">Batag Island, Biri rock formations, further west</span></div>
+    </div>
+
+    <div class="note">
+      <b>A note on this page</b>
+      Tourism sits on the town's own website, not on a separate one. One address, one thing to maintain, and the .gov.ph name is what makes a visitor trust the information. Places belong here. Dated events belong in the announcements at the top of the home page, where they can be taken down when they are over.
+    </div>
+  </section>
+
+  <!-- ============ LIVELIHOOD ============ -->
+  <section class="page" id="p-livelihood">
+    <h3 class="sec">Farming and fishing</h3>
+    <p class="seclead">Coconut and the sea are how most of Lapinig makes a living. Almost every form of government assistance for farmers and fisherfolk starts with being on a list. This page is about the lists.</p>
+
+    <div class="advisory" style="background:var(--good-soft);border-color:var(--good);border-left-color:var(--good);">
+      <span class="tag" style="color:var(--good);">The one thing to take from this page</span>
+      <p><strong>If you are not registered, you are not counted, and if you are not counted you get nothing.</strong> Cash aid, fuel subsidies, seed and fertiliser, crop insurance, calamity assistance after a typhoon. All of it is given out against a list. Registering is free and it is the single most useful hour a farming or fishing household can spend.</p>
+    </div>
+
+    <h3 class="sec">The registrations that matter</h3>
+
+    <div class="reg">
+      <h4>Municipal fisherfolk registration</h4>
+      <div class="who">For anyone who fishes, including part time</div>
+      <p>Every municipality keeps a register of its fisherfolk. Being on it is what makes you eligible for national fisheries programmes, fuel subsidies and post-disaster assistance, and it is also what protects municipal waters for the people who actually live here.</p>
+      <p><strong>Where:</strong> the municipal agriculture office. <span class="tbc">Officer and schedule to be confirmed</span></p>
+      <div class="why"><b>Why bother</b>After a typhoon, aid for damaged boats and gear is distributed from this list. Registering afterwards is too late.</div>
+    </div>
+
+    <div class="reg">
+      <h4>Boat registration</h4>
+      <div class="who">For owners of a motorised or non-motorised banca</div>
+      <p>Boats used for municipal fishing are registered and numbered. It is how a boat is identified if it is lost, and it is required for most assistance involving vessels or engines.</p>
+      <p><strong>Where:</strong> the municipal agriculture office. <span class="tbc">Requirements and fee to be confirmed</span></p>
+    </div>
+
+    <div class="reg">
+      <h4>Farmer and farm worker registry</h4>
+      <div class="who">For farmers, farm workers and their households</div>
+      <p>The national registry of farmers and fisherfolk is the master list used by the agriculture department for cash assistance, seed and fertiliser programmes, and machinery. Households are enrolled through the municipal agriculture office.</p>
+      <p><strong>Where:</strong> the municipal agriculture office. <span class="tbc">Enrolment days to be confirmed</span></p>
+      <div class="why"><b>Why bother</b>Most national farm assistance is released against this registry. Being absent from it is the commonest reason a household in a remote town receives nothing.</div>
+    </div>
+
+    <div class="reg">
+      <h4>Coconut farmer registration</h4>
+      <div class="who">For coconut farmers and farm workers</div>
+      <p>Coconut is the town's crop. There is a national registry of coconut farmers, and being on it is what connects a household to programmes funded specifically for the coconut sector.</p>
+      <p><strong>Where:</strong> through the municipal agriculture office. <span class="tbc">Process to be confirmed</span></p>
+    </div>
+
+    <div class="reg">
+      <h4>Crop and livestock insurance</h4>
+      <div class="who">For registered farmers and fisherfolk</div>
+      <p>Government crop insurance exists for exactly the kind of year this coast has regularly. For many registered farmers the premium is subsidised. It pays out when a storm destroys a harvest, which in Lapinig is not a hypothetical.</p>
+      <p><strong>Where:</strong> ask at the municipal agriculture office. <span class="tbc">Coverage and cut-off dates to be confirmed</span></p>
+      <div class="why"><b>Why bother</b>Insurance has to be in place before the storm. There is a cut-off date each season and missing it means no cover for that crop.</div>
+    </div>
+
+    <div class="reg">
+      <h4>Emergency employment programmes</h4>
+      <div class="who">For displaced, seasonal and unpaid family workers</div>
+      <p>Short-term paid work programmes are run through the labour department and the municipality, often after a disaster. They are allocated by list and by barangay.</p>
+      <p><strong>Where:</strong> the municipal employment or social welfare office, and your barangay. <span class="tbc">Contact to be confirmed</span></p>
+    </div>
+
+    <h3 class="sec">What to bring when you register <span class="wrline">Ano an dadad-on</span></h3>
+    <div class="ccard">
+      <ul>
+        <li>A valid ID, or a barangay certification if you have none.</li>
+        <li>Proof that you farm or fish here: a barangay certification is usually enough.</li>
+        <li>For land: the tax declaration or whatever document you hold, even if it is incomplete.</li>
+        <li>For a boat: the engine details and the boat's dimensions.</li>
+        <li>Your household details, since most programmes count by household.</li>
+      </ul>
+      <p style="margin-bottom:0;font-size:14.5px;color:var(--ink-2);">If a document is missing, go anyway and ask. Being partly registered is better than not being on the list at all, and the office can tell you what to bring next time.</p>
+    </div>
+
+    <h3 class="sec">For fisherfolk, before you go out</h3>
+    <div class="ccard">
+      <div class="crow"><span class="k">Gale warnings</span><span class="v">PAGASA issues warnings for coastal waters separately from the land forecast. Check them, not just the weather. <a href="#" onclick="go('storm');return false;">Storm and emergency page</a></span></div>
+      <div class="crow"><span class="k">Closed seasons</span><span class="v">Some species have closed seasons and some gear is restricted in municipal waters. <span class="tbc">Local rules to be confirmed</span></span></div>
+      <div class="crow"><span class="k">Tell someone</span><span class="v">Leave word of where you are going and when you expect to return.</span></div>
+    </div>
+
+    <div class="note"><b>Everything on this page needs confirming</b>
+    The registrations described here are national programmes and the descriptions are general. The local officer, the schedule, the exact requirements and the current programmes must come from the Municipal Agriculture Office before this page is published. Nothing here is a promise of assistance.</div>
+
+    <div class="howworks">
+      <b>A suggestion for the Municipality</b>
+      The most useful version of this page is not a page at all. It is a schedule: which barangay, which week, an officer sitting at the barangay hall enrolling households on the spot. Publish that schedule here and the page becomes an appointment rather than an explanation.
+    </div>
+  </section>
+
+  <!-- ============ HEALTH ============ -->
+  <section class="page" id="p-health">
+    <h3 class="sec">Health services <span class="wrline">Pankalusogan</span></h3>
+    <p class="seclead">The Rural Health Unit is the first point of care in Lapinig. The nearest hospital is a long road away, so knowing what happens here, and on which day, matters more than it would in a bigger town.</p>
+
+    <div class="advisory" style="background:var(--alert-soft);border-color:var(--alert);border-left-color:var(--alert);">
+      <span class="tag">In an emergency</span>
+      <p>Do not wait for a schedule. Go straight to the Rural Health Unit, or call <strong>911</strong>. During a weather advisory the MDRRM Office is staffed 24 hours.</p>
+    </div>
+
+    <h3 class="sec">Weekly schedule</h3>
+    <p class="seclead">Placeholder. The real schedule comes from the Municipal Health Officer and would be published here, in this shape, so a mother in a far barangay does not travel on the wrong day.</p>
+    <div class="sched">
+      <div class="hd">Rural Health Unit, Lapinig</div>
+      <div class="rw"><span class="day">Monday</span><span class="what"><span class="tbc">To be confirmed</span></span></div>
+      <div class="rw"><span class="day">Tuesday</span><span class="what"><span class="tbc">To be confirmed</span></span></div>
+      <div class="rw"><span class="day">Wednesday</span><span class="what"><span class="tbc">To be confirmed</span></span></div>
+      <div class="rw"><span class="day">Thursday</span><span class="what"><span class="tbc">To be confirmed</span></span></div>
+      <div class="rw"><span class="day">Friday</span><span class="what"><span class="tbc">To be confirmed</span></span></div>
+      <div class="rw"><span class="day">Visiting doctor</span><span class="what"><span class="tbc">To be confirmed</span> · the single most asked question about this office</span></div>
+      <div class="rw"><span class="day">Barangay visits</span><span class="what"><span class="tbc">To be confirmed</span> · which barangay, which week</span></div>
+    </div>
+
+    <h3 class="sec">What the health unit does</h3>
+    <div class="ccard">
+      <div class="crow"><span class="k">Consultation</span><span class="v">General check-up and treatment of common illness.</span></div>
+      <div class="crow"><span class="k">Prenatal care</span><span class="v">Check-ups through pregnancy, and referral for delivery.</span></div>
+      <div class="crow"><span class="k">Immunisation</span><span class="v">Childhood vaccines on the schedule above. Bring the child's immunisation card every time.</span></div>
+      <div class="crow"><span class="k">Family planning</span><span class="v">Counselling and supplies.</span></div>
+      <div class="crow"><span class="k">TB programme</span><span class="v">Testing and supervised treatment.</span></div>
+      <div class="crow"><span class="k">Senior and PWD health</span><span class="v">Regular check-ups, and help with the paperwork for benefits.</span></div>
+      <div class="crow"><span class="k">Referral</span><span class="v">If you need a hospital, the health unit writes the referral. Ask for it rather than travelling without one.</span></div>
+    </div>
+
+    <h3 class="sec">What to bring <span class="wrline">Ano an dadad-on</span></h3>
+    <div class="ccard">
+      <ul>
+        <li>Any valid ID, or a barangay certification if you have none.</li>
+        <li>Your <strong>PhilHealth</strong> number if you have one.</li>
+        <li>The child's immunisation card, for anything involving a child.</li>
+        <li>Your list of current medicines, or the boxes themselves.</li>
+        <li>Any previous laboratory result or referral letter.</li>
+      </ul>
+    </div>
+
+    <div class="howworks">
+      <b>PhilHealth Konsulta</b>
+      Every Filipino may register with a Konsulta provider for free consultations, basic laboratory tests and some medicines. Many people never register and pay for things they are entitled to receive. Ask at the health unit whether Lapinig is a registered provider and how to sign up. <span class="tbc">Details to be confirmed</span>
+    </div>
+
+    <div class="note"><b>Nothing personal is stored on this website</b>
+    This page holds schedules and requirements only. Your health records stay at the health unit, on paper, and are never put into any computer tool. Nobody's medical information appears here.</div>
+  </section>
+
+  <!-- ============ BARANGAYS ============ -->
+  <section class="page" id="p-barangays">
+    <h3 class="sec">The 15 barangays</h3>
+    <p class="seclead">Your barangay is your first stop for most things: clearances, certifications, disputes, and help during a storm. Know your captain and the hall before you need them.</p>
+
+    <div class="brgytbl">
+      <table>
+        <thead><tr>
+          <th style="width:22%">Barangay</th><th style="width:26%">Punong Barangay</th>
+          <th style="width:22%">Contact</th><th>Notes</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="nm">Alang-alang</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td></td></tr>
+          <tr><td class="nm">Bagacay</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td></td></tr>
+          <tr><td class="nm">Cahagwayan</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td>On the road into the poblacion</td></tr>
+          <tr><td class="nm">Can Maria</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td></td></tr>
+          <tr><td class="nm">Can Omanio</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td></td></tr>
+          <tr><td class="nm">Imelda</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td>On the road into the poblacion</td></tr>
+          <tr><td class="nm">Lapinig del Norte</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td><span class="pobl">Poblacion</span></td></tr>
+          <tr><td class="nm">Lapinig del Sur</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td><span class="pobl">Poblacion</span></td></tr>
+          <tr><td class="nm">Lo-ok</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td>Near the municipal hall</td></tr>
+          <tr><td class="nm">Mabini</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td>Beach on the Pacific side</td></tr>
+          <tr><td class="nm">May-igot</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td>On the road into the poblacion</td></tr>
+          <tr><td class="nm">Palanas</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td>On the road into the poblacion</td></tr>
+          <tr><td class="nm">Pio del Pilar</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td></td></tr>
+          <tr><td class="nm">Potong</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td></td></tr>
+          <tr><td class="nm">Potong del Sur</td><td><span class="tbc">To be confirmed</span></td><td><span class="tbc">TBC</span></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint">Barangay names are from the official list. Everything else is to be supplied by the Municipality. The road notes come from a published traveller account and should be checked locally.</p>
+
+    <h3 class="sec">What your barangay does</h3>
+    <div class="ccard">
+      <div class="crow"><span class="k">Clearances</span><span class="v">Barangay clearance <em>(Barangay Klirans)</em> and certifications, which most municipal services require first.</span></div>
+      <div class="crow"><span class="k">Residency</span><span class="v">Certification that you live there <em>(Sertipiko han Pag-istar, o Pag-ukoy)</em>, needed for many applications.</span></div>
+      <div class="crow"><span class="k">Disputes</span><span class="v">Many disagreements between neighbours must go to the barangay before any court will hear them.</span></div>
+      <div class="crow"><span class="k">During a storm</span><span class="v">Your barangay officials run the evacuation for your area. Register in advance if you or someone at home needs help to leave.</span></div>
+      <div class="crow"><span class="k">Lists and programmes</span><span class="v">Beneficiary lists usually start at the barangay. If you are not on the barangay list, you are not on the municipal one.</span></div>
+    </div>
+
+    <div class="howworks">
+      <b>Why this page matters more than it looks</b>
+      In a town spread across 15 barangays with a long coastal road, the difference between reaching your barangay captain in five minutes and not reaching anyone can be the difference between being on an evacuation list and being missed. Fifteen names and fifteen numbers.
+    </div>
+  </section>
+
+  <!-- ============ AWAY FROM HOME ============ -->
+  <section class="page" id="p-away">
+    <h3 class="sec">For Lapinignons away from home <span class="wrline">Kon Harayo Ka</span></h3>
+    <p class="seclead">You do not have to be in Lapinig to get a document from Lapinig. This page is for anyone working in Manila, Cebu, or abroad who needs a paper from their home town and cannot come for it.</p>
+
+    <div class="howworks">
+      <b>First, make sure you are asking the right office</b>
+      Many people queue at the municipal hall for a document that has to come from somewhere else. The three routes below are different, and picking the wrong one costs weeks.
+    </div>
+
+    <div class="route">
+      <span class="num">1</span>
+      <div>
+        <b>A local copy from the Municipality of Lapinig</b>
+        <p>Barangay and business clearances, certificates of residency or indigency, tax clearances, and local civil registry copies held here.</p>
+        <p><strong>Get it here.</strong> Through an authorised representative, using the letter below.</p>
+      </div>
+    </div>
+
+    <div class="route">
+      <span class="num">2</span>
+      <div>
+        <b>A PSA copy of a birth, marriage or death certificate</b>
+        <p>Most employers, embassies, banks and agencies want the <strong>PSA</strong> copy on security paper, not the local registry copy. The PSA can be ordered online and delivered, including to some addresses abroad.</p>
+        <p><strong>Do not come to the municipal hall for this.</strong> Order it from the PSA directly. <a href="https://psa.gov.ph" target="_blank" rel="noopener">psa.gov.ph</a></p>
+      </div>
+    </div>
+
+    <div class="route">
+      <span class="num">3</span>
+      <div>
+        <b>A document for use in another country</b>
+        <p>If it will be used abroad, it usually needs an <strong>apostille</strong> from the Department of Foreign Affairs after you have the PSA copy. That is the step people forget, and it sends documents back across the world.</p>
+        <p><a href="https://dfa.gov.ph" target="_blank" rel="noopener">dfa.gov.ph</a></p>
+      </div>
+    </div>
+
+    <h3 class="sec">Sending someone on your behalf</h3>
+    <p class="seclead">For anything in route 1, a relative or friend in Lapinig can collect it for you. They need three things and nothing more.</p>
+    <div class="ccard">
+      <div class="crow"><span class="k">1. Your letter</span><span class="v">An authorisation letter, signed by you. The wording below is enough.</span></div>
+      <div class="crow"><span class="k">2. Your ID</span><span class="v">A clear photo or photocopy of your valid ID, showing your signature.</span></div>
+      <div class="crow"><span class="k">3. Their ID</span><span class="v">The original valid ID of the person collecting.</span></div>
+      <div class="crow"><span class="k">Sent how</span><span class="v">A photo of a signed letter sent by message is usually accepted for routine certificates. Ask the office first if the document is important.</span></div>
+    </div>
+
+    <h3 class="sec">Authorisation letter you can copy</h3>
+    <p class="seclead">Fill in the parts in gold, print or write it out, sign it, and send a clear photo to the person collecting.</p>
+    <div class="letter">Date: <span class="fill">date</span>
+
+To the <span class="fill">name of office, for example the Local Civil Registrar</span>
+Municipality of Lapinig
+Northern Samar
+
+I, <span class="fill">your full name</span>, of legal age and a resident of <span class="fill">your address</span>, hereby authorise <span class="fill">full name of the person collecting</span> to request and receive on my behalf the following document:
+
+<span class="fill">name the document, and the name and date on the record</span>
+
+This authorisation is for that purpose only. A copy of my valid identification is attached.
+
+Thank you.
+
+<span class="fill">your signature</span>
+<span class="fill">your printed name</span>
+<span class="fill">your contact number or email</span></div>
+
+    <h3 class="sec">Practical things nobody tells you</h3>
+    <div class="ccard">
+      <div class="crow"><span class="k">Office hours</span><span class="v">8:00 AM to 5:00 PM Philippine time, Monday to Friday. Work out the difference before you call.</span></div>
+      <div class="crow"><span class="k">Paying the fee</span><span class="v">Your representative pays at the cashier and gets the official receipt. Send them the amount plus a little extra for the trip.</span></div>
+      <div class="crow"><span class="k">How long</span><span class="v">See the service page for the legal processing time. Add travel time if your representative lives in a far barangay.</span></div>
+      <div class="crow"><span class="k">Get the details right</span><span class="v">Exact spelling of names, the date, and the parents' names. A wrong middle name sends the search back to the start.</span></div>
+      <div class="crow"><span class="k">Storms</span><span class="v">During an advisory the offices close. Check the home page before you ask anyone to travel.</span></div>
+    </div>
+
+    <div class="note"><b>What this office cannot do</b>
+    We cannot email a certified copy, because a certification has to be a physical document with a seal. We cannot look up your record and read it to you over the phone. And we cannot skip the authorisation, however urgent it is, because that rule is what protects your record from anyone else.</div>
+
+    <div class="howworks">
+      <b>No birth certificate at all?</b>
+      Some people were never registered at birth. It is more common than most realise, and it can be fixed through late registration at the Local Civil Registry. It takes affidavits and time, but it is possible, and without it there is no passport, no PhilHealth and no formal job. Ask the Civil Registry to start the process.
+    </div>
+  </section>
+
+  <!-- ============ STORM ============ -->
+  <section class="page" id="p-storm">
+    <h3 class="sec">Storm and emergency <span class="wrline">Bagyo ngan emerhensya</span></h3>
+    <p class="seclead">Lapinig faces the open Pacific and gets rain on roughly 251 days a year. Storms reach this coast before they reach anywhere else in the province. This page is what to do, where to go and who to call, so nobody has to search for it on the day it matters.</p>
+
+    <div class="status">
+      <div class="lbl">Right now</div>
+      <h4>No advisory is in force</h4>
+      <p>When the Municipality declares something, it appears at the top of the home page and here. If this box is green, there is nothing to report. Sample state for the prototype.</p>
+    </div>
+
+    <h3 class="sec">Official forecasts</h3>
+    <p class="seclead">Weather information comes from PAGASA, the national weather service. These links open PAGASA's own website. The Municipality does not republish forecasts as its own, because a wrong forecast on a government page is worse than none.</p>
+
+    <div class="srcbox">
+      <div class="srclink">
+        <a href="https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin" target="_blank" rel="noopener">Severe Weather Bulletin</a>
+        <span>Tropical cyclone bulletins and wind signal warnings, updated by PAGASA during a storm.</span>
+        <span class="ext">PAGASA</span>
+      </div>
+      <div class="srclink">
+        <a href="https://www.pagasa.dost.gov.ph/weather" target="_blank" rel="noopener">Daily weather forecast</a>
+        <span>The regular public forecast, including Eastern Visayas.</span>
+        <span class="ext">PAGASA</span>
+      </div>
+      <div class="srclink">
+        <a href="https://www.pagasa.dost.gov.ph/" target="_blank" rel="noopener">PAGASA main site</a>
+        <span>Rainfall advisories, thunderstorm warnings, gale warnings for coastal waters.</span>
+        <span class="ext">PAGASA</span>
+      </div>
+      <div class="srclink">
+        <a href="https://ndrrmc.gov.ph/" target="_blank" rel="noopener">NDRRMC</a>
+        <span>National situation reports during a major disaster.</span>
+        <span class="ext">National</span>
+      </div>
+      <div class="srclink">
+        <a href="https://northernsamar.gov.ph" target="_blank" rel="noopener">Province of Northern Samar</a>
+        <span>Provincial advisories and province-wide suspensions.</span>
+        <span class="ext">Province</span>
+      </div>
+    </div>
+
+    <div class="howworks">
+      <b>Two different things, kept apart on purpose</b>
+      <strong>Weather information</strong> comes from PAGASA and is theirs. <strong>Suspension of classes and government work in Lapinig</strong> is a decision only the Mayor can make. It is never automatic, it is always posted by a named officer of the Mayor's Office, and that name and time appear on the notice.
+    </div>
+
+    <h3 class="sec">Who to call <span class="wrline">Hin-o an tatawagan</span></h3>
+    <div class="ccard">
+      <div class="crow"><span class="k">MDRRM Office</span><span class="v"><span class="tbc">To be confirmed</span> · staffed 24 hours during an advisory</span></div>
+      <div class="crow"><span class="k">Municipal Hall</span><span class="v"><span class="tbc">To be confirmed</span></span></div>
+      <div class="crow"><span class="k">Police station</span><span class="v"><span class="tbc">To be confirmed</span></span></div>
+      <div class="crow"><span class="k">Rural Health Unit</span><span class="v"><span class="tbc">To be confirmed</span></span></div>
+      <div class="crow"><span class="k">National emergency hotline</span><span class="v"><strong>911</strong></span></div>
+      <div class="crow"><span class="k">Your barangay</span><span class="v">Your barangay captain and tanod are your first contact. Know the number before the storm.</span></div>
+    </div>
+
+    <h3 class="sec">Evacuation centres <span class="wrline">Ibakwitan nga lugar</span></h3>
+    <p class="seclead">Know where yours is before you need it. The list below is a placeholder. The real one comes from the MDRRM Office and would be published here per barangay.</p>
+    <div class="ccard">
+      <div class="crow"><span class="k">Poblacion area</span><span class="v"><span class="tbc">To be confirmed</span></span></div>
+      <div class="crow"><span class="k">Northern barangays</span><span class="v"><span class="tbc">To be confirmed</span></span></div>
+      <div class="crow"><span class="k">Southern barangays</span><span class="v"><span class="tbc">To be confirmed</span></span></div>
+      <div class="crow"><span class="k">Inland barangays</span><span class="v"><span class="tbc">To be confirmed</span></span></div>
+      <div class="crow"><span class="k">Persons needing help to evacuate</span><span class="v">Register with your barangay so you are on the assistance list before a storm, not during one.</span></div>
+    </div>
+
+    <h3 class="sec">Before a storm</h3>
+    <div class="ccard">
+      <h4>Prepare a go-bag</h4>
+      <ul class="gobag">
+        <li>Drinking water for three days</li>
+        <li>Food that needs no cooking</li>
+        <li>Medicines, with the prescription</li>
+        <li>Torch and spare batteries</li>
+        <li>Fully charged phone and a power bank</li>
+        <li>Important papers in a sealed plastic bag</li>
+        <li>Cash in small denominations</li>
+        <li>Change of clothes and a blanket</li>
+        <li>Whistle</li>
+        <li>Something for the children to hold</li>
+      </ul>
+      <p style="margin-top:8px;margin-bottom:0;font-size:14.5px;color:var(--ink-2);">Charge everything early. Fill containers with clean water. Secure the roof and loose materials. Move boats and gear to safety. Tell a relative outside Lapinig where you plan to be.</p>
+    </div>
+
+    <h3 class="sec">After a storm</h3>
+    <div class="ccard">
+      <ul>
+        <li><strong>An pagmingaw o pagkalma han panahon diri karuyag sidngon nga human na an bagyo. Paghulat han Pahibaro han Munisipyo antis ka bumalik ha imo balay.</strong><br>A lull is not the end of a storm. Wait for the Municipality to declare it safe before returning home.</li>
+        <li>Keep away from fallen electrical wires and from flood water.</li>
+        <li>Do not drink water you are unsure of. Boil it.</li>
+        <li>Report damage to your barangay first, so it reaches the MDRRM Office through the proper count.</li>
+        <li>Check on your neighbours, especially those living alone.</li>
+      </ul>
+    </div>
+
+    <div class="note"><b>Why this is a page and not a weather widget</b>
+    A widget shows today's temperature. This page answers what to do, where to go and who to call, which is what people actually need and what nobody can search for calmly at 2 in the morning. It stays useful on the 250 days when nothing is happening.</div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="page" id="p-contact">
+    <h3 class="sec">Contact the Municipality <span class="wrline">Kontaka kami</span></h3>
+    <p class="seclead">Where the municipal hall is, when it is open, and who to reach. Everything marked in gold still needs to be confirmed by the Municipality.</p>
+
+    <div class="ccard">
+      <h4>Municipal Hall</h4>
+      <p class="addr">
+        <strong>Municipality of Lapinig</strong>
+        Poblacion, Lapinig<br>
+        Northern Samar 6423<br>
+        Eastern Visayas, Philippines
+      </p>
+      <a class="maplink" href="https://www.openstreetmap.org/?mlat=12.3168&amp;mlon=125.3023#map=15/12.3168/125.3023" target="_blank" rel="noopener">Open the location on a map</a>
+      <p style="font-size:13px;color:var(--ink-3);margin-top:8px;margin-bottom:0;">12.3168° N, 125.3023° E · postal code 6423</p>
+    </div>
+
+    <div class="ccard">
+      <h4>Office hours</h4>
+      <div class="crow"><span class="k">Monday to Friday</span><span class="v">8:00 AM to 5:00 PM, no noon break</span></div>
+      <div class="crow"><span class="k">Weekends and holidays</span><span class="v">Closed, except the MDRRM Office during a weather advisory</span></div>
+      <div class="crow"><span class="k">Busiest period</span><span class="v">1 to 20 January, business permit renewals</span></div>
+    </div>
+
+    <div class="ccard">
+      <h4>How to reach us</h4>
+      <div class="crow"><span class="k">Telephone</span><span class="v"><span class="tbc">To be confirmed</span></span></div>
+      <div class="crow"><span class="k">Mobile</span><span class="v"><span class="tbc">To be confirmed</span></span></div>
+      <div class="crow"><span class="k">Official email</span><span class="v"><span class="tbc">To be confirmed</span></span></div>
+      <div class="crow"><span class="k">Facebook page</span><span class="v"><span class="tbc">To be confirmed</span></span></div>
+      <div class="crow"><span class="k">Website</span><span class="v">lapinig.gov.ph <span class="tbc">Not yet registered</span></span></div>
+      <div class="crow"><span class="k">MDRRM Office</span><span class="v"><span class="tbc">To be confirmed</span> · staffed 24 hours during an advisory</span></div>
+    </div>
+
+    <div class="howworks">
+      <b>Why so many gaps, and why that matters</b>
+      Every detail above was gathered from public sources. The address, the postal code and the coordinates are published and verifiable. <strong>No telephone number, mobile number or email address for this municipality appears anywhere publicly.</strong> A resident in Manila or abroad who wants to phone the municipal hall today cannot find a number to call. Filling in these six lines is the smallest and fastest improvement on this entire website.
+    </div>
+
+    <div class="ccard">
+      <h4>Getting here</h4>
+      <div class="crow"><span class="k">Nearest airport</span><span class="v">Catarman, then overland</span></div>
+      <div class="crow"><span class="k">From Arteche, E. Samar</span><span class="v">About 24 km, roughly half an hour from the provincial boundary</span></div>
+      <div class="crow"><span class="k">Local transport</span><span class="v">Habal-habal for the rougher stretches</span></div>
+      <div class="crow"><span class="k">Road to Jipapad</span><span class="v">Can be impassable after heavy rain</span></div>
+    </div>
+
+    <div class="note"><b>Barangay contacts</b>
+    Barangay hall numbers are not published here. A resident who needs their barangay is told to visit it, and any barangay number would be listed by the barangay itself, not by the municipality.</div>
+  </section>
+
+  <!-- ============ FEEDBACK ============ -->
+  <section class="page" id="p-feedback">
+    <h3 class="sec">Feedback and complaints</h3>
+    <p class="seclead">Published under Republic Act 11032, the Ease of Doing Business and Efficient Government Service Delivery Act, which requires every government office to have a way for the public to complain and to be answered.</p>
+
+    <div class="advisory" style="background:var(--gold-soft);border-color:var(--gold);border-left-color:var(--gold);">
+      <span class="tag" style="color:var(--gold);">The rule that matters most</span>
+      <p><strong>There are no fixers here, and no fee that is not published.</strong> If anyone asks you for money that does not appear on the service page and does not come with an official receipt, report it. You will not be treated differently for reporting it.</p>
+    </div>
+
+    <h3 class="sec">Where to take it, in order</h3>
+    <ol class="esc">
+      <li><b>The office concerned</b><span>Ask for the officer named on the service page. Most problems are a missing document or a misunderstanding and are solved at the counter in five minutes.</span></li>
+      <li><b>The Municipal Administrator</b><span>If the office cannot resolve it, or you would rather not raise it with them. <span class="tbc">Contact to be confirmed</span></span></li>
+      <li><b>The Office of the Mayor</b><span>For anything unresolved, or anything involving conduct. <span class="tbc">Contact to be confirmed</span></span></li>
+      <li><b>Outside the Municipality</b><span>You are always free to go straight here instead. The <a href="https://8888.gov.ph" target="_blank" rel="noopener">8888 Citizens' Complaint Hotline</a> and the <a href="https://arta.gov.ph" target="_blank" rel="noopener">Anti-Red Tape Authority</a> receive complaints about any government office in the country, including this one.</span></li>
+    </ol>
+
+    <h3 class="sec">What to include</h3>
+    <div class="ccard">
+      <div class="crow"><span class="k">Which office</span><span class="v">And the service you were asking for.</span></div>
+      <div class="crow"><span class="k">When</span><span class="v">The date and roughly the time.</span></div>
+      <div class="crow"><span class="k">What happened</span><span class="v">In your own words. You do not need formal language.</span></div>
+      <div class="crow"><span class="k">What you want</span><span class="v">The document released, the fee refunded, an apology, or simply that it stops happening to others.</span></div>
+      <div class="crow"><span class="k">How to reach you</span><span class="v">Optional. See below.</span></div>
+    </div>
+
+    <h3 class="sec">What happens next</h3>
+    <div class="ccard">
+      <div class="crow"><span class="k">Acknowledged</span><span class="v">Within <span class="tbc">to be set</span> working days, with a reference number.</span></div>
+      <div class="crow"><span class="k">Answered</span><span class="v">Within <span class="tbc">to be set</span> working days, in writing.</span></div>
+      <div class="crow"><span class="k">Recorded</span><span class="v">Every complaint is logged, whether or not it is upheld, and the totals are reported to the Sangguniang Bayan.</span></div>
+    </div>
+
+    <div class="howworks">
+      <b>You can complain without giving your name</b>
+      An anonymous complaint is still recorded and still investigated. We cannot write back to you, and some matters cannot be resolved without your account, but nothing is thrown away because it is unsigned. In a town this size we understand exactly why somebody might prefer not to sign.
+    </div>
+
+    <div class="note"><b>Your privacy</b>
+    Complaints are seen only by the officers who need to act on them. Your name is not given to the office you complained about unless you agree, or unless the matter cannot be resolved without it, in which case you are told first. Handled under the Data Privacy Act of 2012.</div>
+
+    <div class="note"><b>Suggestions are welcome too</b>
+    This page is not only for complaints. If something here could be simpler, or a requirement no longer makes sense, tell us. The service list is reviewed every six months and that is when suggestions get acted on.</div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="page" id="p-about">
+    <h3 class="sec">About this website</h3>
+    <div class="card">
+      <h4>Who maintains it</h4>
+      <p class="small">Designated website administrator and an alternate, named by executive order. Service information is reviewed every six months and each service page shows the date it was last checked. Sample text.</p>
+    </div>
+    <div class="card">
+      <h4>Use of artificial intelligence</h4>
+      <p class="small">The "Ask a question" assistant on this site is a computer program. It answers only from the published service list on this website and shows you which page each answer came from. It does not make decisions, it cannot see your records, and it will never ask for personal information.</p>
+      <p class="small">A person is responsible for what it says. If you need a decision about your own case, please speak with the office named on the service page.</p>
+      <p class="small">Published in line with the DICT and Civil Service Commission Joint Memorandum Circular No. 003, series of 2026.</p>
+    </div>
+    <div class="card">
+      <h4>Why our Facebook page is linked and not embedded</h4>
+      <p class="small">This website is the permanent record. Our Facebook page is how we reach people quickly. Anything important is posted here first, then shared there.</p>
+      <p class="small">We link to Facebook rather than embedding it, so this site stays fast on a weak connection, keeps working when Facebook changes something, and does not pass information about you to another company just because you read an advisory.</p>
+    </div>
+    <div class="card">
+      <h4>Advisories and announcements</h4>
+      <p class="small"><strong>Weather information</strong> is drawn from the public feed published by PAGASA and is labelled as such. It is information only.</p>
+      <p class="small"><strong>Suspension of classes and government work</strong> is never automatic. Only the Municipal Mayor can declare it. Each such notice is posted by a named officer of the Mayor's Office, and that name appears on the notice with the date and time.</p>
+      <p class="small">On a normal day the advisory area at the top of the home page is empty. If you see nothing there, there is nothing to report.</p>
+    </div>
+    <div class="card">
+      <h4>Language</h4>
+      <p class="small">This site publishes in <strong>English and Waray</strong>. Waray is the language of the counter, so it carries the words people actually use when they ask for something.</p>
+      <p class="small">Where you see <span class="tbc">Waray to be confirmed</span>, a Waray speaker from Lapinig has not settled that word yet, and we would rather show nothing than show Waray that sounds foreign. Nothing goes up until somebody local approves it.</p>
+      <p class="small"><strong>Tagalog is not printed on the page, but it still works in the search box.</strong> Type <em>buwis</em> and you will find the tax page. Nothing shows, nothing is lost.</p>
+      <p class="small">Every Waray line on this site is recorded against the name of the person who supplied it, so the next person maintaining the site knows who to ask.</p>
+      <p class="small" style="margin-top:14px;"><strong>The Waray settled so far.</strong> Thirty-eight terms and three full sentences, checked across two rounds by a speaker raised in Oras, the town Lapinig was carved out of in 1956.</p>
+      <div class="gloss"><div><b>Balay</b><span>Home</span></div><div><b>Mga serbisyo</b><span>Services</span></div><div><b>Pankalusogan</b><span>Health</span></div><div><b>Bagyo ngan emerhensya</b><span>Storm and emergency</span></div><div><b>Kon Harayo Ka</b><span>Away from home</span></div><div><b>Kontaka kami</b><span>Contact us</span></div><div><b>Pamilingan</b><span>Search</span></div><div><b>Pagpakiana</b><span>Ask a question</span></div><div><b>pakiana</b><span>Question</span></div><div><b>Halipotay</b><span>Summary</span></div><div><b>Ano an dadad-on</b><span>What to bring</span></div><div><b>Mga ginkikinahanglan</b><span>Requirements</span></div><div><b>Mga Pitad</b><span>Steps</span></div><div><b>Pira ka adlaw</b><span>How long it takes</span></div><div><b>Oras han opisina</b><span>Office hours</span></div><div><b>Abrido / Sirado</b><span>Open / Closed</span></div><div><b>Hin-o an tatawagan</b><span>Who to call</span></div><div><b>Ibakwitan nga lugar</b><span>Evacuation centre</span></div><div><b>Waray Pasok ha Iskoylahan Ngan Trabaho</b><span>Classes and work suspended</span></div><div><b>Waray pahibaro yana</b><span>No advisory right now</span></div><div><b>Orhi nga gin-update</b><span>Last reviewed</span></div><div><b>Barangay Klirans</b><span>Barangay clearance</span></div><div><b>Tax Klirans</b><span>Tax clearance</span></div><div><b>Kopya han birth certificate</b><span>Copy of a birth certificate</span></div><div><b>Rehistro han Pagkamatay</b><span>Death registration</span></div><div><b>ID han Tigurang</b><span>Senior citizen ID</span></div><div><b>ID han PWD</b><span>PWD ID</span></div><div><b>Sertipiko han pagkapobre</b><span>Certificate of indigency</span></div><div><b>Buwis ha tuna</b><span>Real property tax</span></div><div><b>Sedula</b><span>Cedula</span></div><div><b>Permiso Pagnegosyo, bag-o</b><span>Business permit, new</span></div><div><b>Permiso Pagnegosyo, pag-bag-o</b><span>Business permit, renewal</span></div><div><b>Permit ha Pagbalay</b><span>Building permit</span></div><div><b>Lisensiya Pagpakasal</b><span>Marriage licence</span></div><div><b>Sertipiko han Pag-istar</b><span>Certificate of residency</span></div></div>
+      <p class="small"><strong>Five things are still open, and they are not on the site yet.</strong> There is no Waray word settled for <em>download</em>. <em>Bayad</em> or <em>baraydan</em> for a fee above a number is undecided. The site says <em>Permiso</em> for a business permit and <em>Permit</em> for a building permit, and one of those has to go. And <em>pahibaro</em> is currently doing two different jobs, storm warning and town announcement, which is the one that actually matters, because in a storm a reader should never have to work out which heading is the warning.</p>
+      <p class="small">The menu across the top goes bilingual once every one of its labels has been settled by a Lapinig speaker. Six of the eight are done.</p>
+    </div>
+    <div class="card">
+      <h4>Privacy notice</h4>
+      <p class="small">This website does not require you to log in and does not collect personal information. Search terms are counted anonymously so we can see which services people look for most. Under the Data Privacy Act of 2012, questions may be directed to the Municipality's data protection officer. Sample text.</p>
+    </div>
+    <div class="card">
+      <h4>Accessibility</h4>
+      <p class="small">Built to work on a slow connection and on an older phone. Text can be enlarged without breaking the layout, and every function works without a mouse. Sample text.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="foot-in">
+    <b>Municipality of Lapinig</b>
+    <p>Municipal Hall, Poblacion, Lapinig, Northern Samar 6423 · Eastern Visayas, Philippines</p>
+    <p>Office hours 8:00 AM to 5:00 PM, Monday to Friday</p>
+    <div class="morenav" id="morelinks"><a href="#" onclick="go('charter');return false;">Citizen's Charter</a><a href="#" onclick="go('transparency');return false;">Transparency &amp; FOI</a><a href="#" onclick="go('officials');return false;">Officials &amp; Offices</a><a href="#" onclick="go('barangays');return false;">Barangays</a><a href="#" onclick="go('issuances');return false;">Issuances</a><a href="#" onclick="go('feedback');return false;">Feedback</a><a href="#" onclick="go('about');return false;">About this site</a></div>
+    <div class="govlinks">
+      <a href="https://www.gov.ph" target="_blank" rel="noopener">GOVPH</a>
+      <a href="https://www.officialgazette.gov.ph" target="_blank" rel="noopener">Official Gazette</a>
+      <a href="https://op-proper.gov.ph" target="_blank" rel="noopener">Office of the President</a>
+      <a href="https://web.senate.gov.ph" target="_blank" rel="noopener">Senate</a>
+      <a href="https://www.congress.gov.ph" target="_blank" rel="noopener">House of Representatives</a>
+      <a href="https://sc.judiciary.gov.ph" target="_blank" rel="noopener">Supreme Court</a>
+      <a href="https://northernsamar.gov.ph" target="_blank" rel="noopener">Province of Northern Samar</a>
+    </div>
+    <p style="margin-top:14px;opacity:.75;">Prototype for review. Not an official government website. No content on this page should be relied on.</p>
+  </div>
+</footer>
+
+<button class="fab" onclick="openBot()">Ask a question · Pagpakiana</button>
+
+<div class="panel" id="panel" role="dialog" aria-label="Ask a question">
+  <div class="p-head">
+    <b>Ask about municipal services</b>
+    <button class="cls" onclick="closeBot()" aria-label="Close">×</button>
+  </div>
+  <div class="aidisc"><b>This is a computer, not a person.</b> It answers only from this website's service list and shows its source. For your own case, call the office named in the answer.</div>
+  <div class="log" id="log"></div>
+  <div class="chips" id="chips"></div>
+  <form class="p-form" onsubmit="ask(event)">
+    <input id="qin" placeholder="Type your question..." autocomplete="off" aria-label="Your question">
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script>
+const SERVICES = [
+  {id:"biz", name:"Business permit, new", wr:"Permiso Pagnegosyo, bag-o", alt:"Bagong permit sa negosyo",
+   office:"Business Permits and Licensing", fee:"Varies by capital", time:"3 working days", cls:"Simple",
+   who:"Business", tags:"permit negosyo business mayors permit licensing bagong permiso pagnegosyo bago klirans permiso pagnegosyo bago",
+   req:["Barangay business clearance","DTI or SEC registration","Community tax certificate (cedula)","Location sketch of the business","Occupancy or lease contract"],
+   steps:["Get the barangay business clearance first","Fill the unified application form at the BPLO window","Assessment of fees by the Treasurer","Pay at the cashier","Claim the permit and the plate"],
+   note:"January is the busiest month. Come in the first week if you can, or renew online once that is available."},
+
+  {id:"bizr", name:"Business permit, renewal", wr:"Permiso Pagnegosyo, pag-bag-o", alt:"Pag-renew ng permit sa negosyo",
+   office:"Business Permits and Licensing", fee:"Varies by gross receipts", time:"3 working days", cls:"Simple",
+   who:"Business", tags:"renew renewal permit negosyo january enero business pagrenew permiso pagnegosyo pagbago permiso pagnegosyo pagbago",
+   req:["Previous year's mayor's permit","Barangay business clearance","Sworn statement of gross receipts","Community tax certificate"],
+   steps:["Present last year's permit at the BPLO window","Assessment of fees","Pay at the cashier","Claim the renewed permit"],
+   note:"Renewal period is 1 to 20 January. Expect queues in the second and third week."},
+
+  {id:"birth", name:"Certified copy of a birth certificate", wr:"Kopya han birth certificate", alt:"Kopya ng birth certificate",
+   office:"Local Civil Registry", fee:"Php 130 (sample)", time:"7 working days", cls:"Complex",
+   who:"Citizen", tags:"birth certificate kopya kapanganakan registry lcr psa kopya birth certificate",
+   req:["Valid ID of the requester","Full name of the person on the record","Date and place of birth","Names of the parents","Authorization letter if you are not the person named"],
+   steps:["Fill the request form at the Civil Registry window","Staff search the record books","Verification","Printing and certification","Release, with your ID presented"],
+   note:"The assistant on this site can tell you what to bring. It cannot look up anybody's record. Records are only released at the counter, to the person named or an authorized representative."},
+
+  {id:"death", name:"Death certificate registration", wr:"Rehistro han Pagkamatay", alt:"Pagpaparehistro ng kamatayan",
+   office:"Local Civil Registry", fee:"Free within 30 days", time:"7 working days", cls:"Complex",
+   who:"Citizen", tags:"death certificate kamatayan registry libing burial funeral rehistro pagkamatay kamatayon",
+   req:["Medical certificate of death signed by the attending physician or health officer","Valid ID of the informant","Details of the deceased"],
+   steps:["Submit the medical certificate at the Civil Registry","Details are recorded","Registration","Certified copy released on request"],
+   note:"Register within 30 days. Late registration takes longer and needs additional affidavits."},
+
+  {id:"marr", name:"Marriage license application", wr:"Lisensiya Pagpakasal", alt:"Aplikasyon ng marriage license",
+   office:"Local Civil Registry", fee:"Php 200 (sample)", time:"10 days posting, then release", cls:"Complex",
+   who:"Citizen", tags:"marriage license kasal wedding kasado lisensiya pagpakasal lisensiya pagpakasal",
+   req:["Birth certificates of both parties","Certificate of no marriage (CENOMAR)","Valid IDs","Parental consent or advice if required by age","Pre-marriage counselling certificate"],
+   steps:["Both parties apply in person","Documents checked","Application posted for 10 consecutive days as required by law","License released after the posting period"],
+   note:"The 10 day posting period is required by the Family Code and cannot be shortened."},
+
+  {id:"senior", name:"Senior citizen ID", wr:"ID han Tigurang", alt:"ID ng senior citizen",
+   office:"OSCA, Mayor's Office", fee:"Free", time:"3 working days", cls:"Simple",
+   who:"Citizen", tags:"senior citizen id osca matanda nakatatanda discount 60 id tigurang lagas",
+   req:["Proof of age, birth certificate or any valid ID","Proof of residence in Lapinig","One 1x1 photo"],
+   steps:["Apply at the OSCA desk","Details verified against the barangay list","ID printed","Release and signature"],
+   note:"Free of charge. If anyone asks you for a payment for this, report it."},
+
+  {id:"pwd", name:"PWD identification card", wr:"ID han PWD", alt:"ID ng PWD",
+   office:"MSWDO", fee:"Free", time:"3 working days", cls:"Simple",
+   who:"Citizen", tags:"pwd disability id card discount id pwd",
+   req:["Medical certificate stating the disability","Valid ID or barangay certification","Two 1x1 photos"],
+   steps:["Apply at the MSWDO","Assessment of the submitted documents","ID printed","Release"],
+   note:"Free of charge. Renewal follows the same steps."},
+
+  {id:"indig", name:"Certificate of indigency", wr:"Sertipiko han pagkapobre", alt:"Sertipiko ng indigency",
+   office:"MSWDO", fee:"Free", time:"1 working day", cls:"Simple",
+   who:"Citizen", tags:"indigency certificate pobre tulong assistance medical burial sertipiko pagkapobre",
+   req:["Barangay certification of residency","Valid ID","Statement of the purpose, for example medical or burial assistance"],
+   steps:["Request at the MSWDO window","Barangay certification verified","Certificate prepared","Signed and released"],
+   note:"Usually issued the same day if the barangay certification is complete."},
+
+  {id:"rpt", name:"Real property tax payment", wr:"Buwis ha tuna", alt:"Bayad ng buwis sa lupa",
+   office:"Treasurer's Office", fee:"Based on assessment", time:"Same day", cls:"Simple",
+   who:"Both", tags:"real property tax amilyar buwis lupa land title assessment buwis tuna",
+   req:["Previous official receipt or tax declaration number","Valid ID","Name of the registered owner"],
+   steps:["Present the tax declaration at the Treasurer's window","Computation of the amount due","Pay at the cashier","Official receipt issued"],
+   note:"Discounts apply for advance and prompt payment. Ask at the window which applies to you."},
+
+  {id:"rptc", name:"Real property tax clearance", wr:"Tax Klirans", alt:"Clearance ng buwis sa lupa",
+   office:"Treasurer's Office", fee:"Php 100 (sample)", time:"3 working days", cls:"Simple",
+   who:"Both", tags:"clearance real property tax buwis lupa bentahan transfer klirans tax klirans barangay klirans tax klirans barangay klirans",
+   req:["Proof that all taxes are paid","Tax declaration","Valid ID"],
+   steps:["Request at the Treasurer's Office","Payment record verified","Clearance prepared","Signed and released"],
+   note:"Needed for most land transactions."},
+
+  {id:"bldg", name:"Building permit", wr:"Permit ha Pagbalay", alt:"Permit sa pagpapatayo",
+   office:"Municipal Engineering Office", fee:"Based on floor area", time:"20 working days", cls:"Highly technical",
+   who:"Both", tags:"building permit bahay construction engineering pagpapatayo permit pagbalay permiso",
+   req:["Five sets of building plans signed by a licensed professional","Lot title or lease with consent of the owner","Barangay clearance","Tax clearance","Bill of materials and specifications"],
+   steps:["Submit plans at the Engineering Office","Technical review","Assessment of fees","Payment","Permit issued and posted at the site"],
+   note:"Highly technical transactions may take up to 20 working days under RA 11032."},
+
+  {id:"cedula", name:"Community tax certificate (cedula)", wr:"Sedula", alt:"Sedula",
+   office:"Treasurer's Office", fee:"Php 5 and up (sample)", time:"Same day", cls:"Simple",
+   who:"Both", tags:"cedula sedula community tax certificate ctc sedula",
+   req:["Valid ID","Statement of income if applicable"],
+   steps:["Go to the Treasurer's window","Computation","Pay","Certificate issued immediately"],
+   note:"Issued over the counter. Bring the exact amount if you can."}
+];
+
+/* Elected officials: from the published 2025 election results.
+   Office heads: placeholders, to be confirmed with the municipality. */
+const OFFICIALS = {
+  mayor: 'Romualdo "Don Don" A. Menzon Jr.',
+  vice:  'Dr. Ma. Luisa "Babie" A. Menzon',
+  sb: ["Analiza I. Gabilan","Lucia L. Gabay","Bartolome P. Mengote","Ruby Q. Delmonte",
+       "Annde P. Openia","Carlito O. Morallos","Vivian M. Rongcales","Edmundo M. Hermano"]
+};
+const OFFICE_HEADS = [
+  ["Municipal Administrator","To be confirmed"],
+  ["Secretary to the Sangguniang Bayan","To be confirmed"],
+  ["Municipal Planning and Development Coordinator","To be confirmed"],
+  ["Municipal Treasurer","To be confirmed"],
+  ["Municipal Assessor","To be confirmed"],
+  ["Local Civil Registrar","To be confirmed"],
+  ["Municipal Social Welfare and Development Officer","To be confirmed"],
+  ["Municipal Health Officer","To be confirmed"],
+  ["Municipal Engineer","To be confirmed"],
+  ["MDRRM Officer","To be confirmed"],
+  ["Business Permits and Licensing Officer","To be confirmed"],
+  ["MLGOO, DILG","To be confirmed"]
+];
+
+const NEWS = [
+ {title:"Municipal hall services resume after weekend maintenance",
+  author:"Office of the Municipal Administrator", date:"2026-09-02",
+  sum:"Sample post. All frontline windows are open on the regular schedule, 8:00 AM to 5:00 PM with no noon break."},
+ {title:"Barangay officials complete disaster preparedness refresher",
+  author:"MDRRM Office", date:"2026-08-27",
+  sum:"Sample post. Representatives from all 15 barangays reviewed evacuation procedures ahead of the season."},
+ {title:"Business permit renewal reminders begin this quarter",
+  author:"Business Permits and Licensing Office", date:"2026-08-15",
+  sum:"Sample post. Renewal runs 1 to 20 January. Requirements are listed on the service page so nobody arrives short a document."}
+];
+
+const ISSUANCES = [
+ {no:"Ord. 2026-04", type:"Ordinance", year:2026, date:"2026-07-14",
+  title:"Regulating the use of single-use plastics in public markets",
+  sum:"Sample entry. Sets a phase-out schedule and penalties for the public market and municipal buildings."},
+ {no:"Ord. 2026-02", type:"Ordinance", year:2026, date:"2026-03-09",
+  title:"Revised schedule of fees for municipal certifications",
+  sum:"Sample entry. Amends the fees listed in the Citizen's Charter for barangay and business clearances."},
+ {no:"Res. 2026-31", type:"Resolution", year:2026, date:"2026-08-18",
+  title:"Accepting a donation of professional services for records digitisation",
+  sum:"Sample entry. The form of resolution used when the Municipality accepts pro bono assistance."},
+ {no:"Res. 2026-22", type:"Resolution", year:2026, date:"2026-06-02",
+  title:"Requesting DPWH action on the Lapinig to Arteche road section",
+  sum:"Sample entry. Reiterates the request for the 24 km stretch identified as the town's main constraint."},
+ {no:"EO 2026-07", type:"Executive Order", year:2026, date:"2026-09-01",
+  title:"Adopting a policy on the responsible use of artificial intelligence tools",
+  sum:"Sample entry. Constitutes the AI Oversight Committee and sets permitted and prohibited uses."},
+ {no:"EO 2026-05", type:"Executive Order", year:2026, date:"2026-05-20",
+  title:"Designating the municipal website administrator and alternate",
+  sum:"Sample entry. Names who maintains the site and sets the six-month content review."},
+ {no:"ADV 2026-11", type:"Advisory", year:2026, date:"2026-08-30",
+  title:"Suspension of work due to weather, all offices",
+  sum:"Sample entry. Advisories stay in the archive after they expire, so the record of what was declared remains."},
+ {no:"Ord. 2025-09", type:"Ordinance", year:2025, date:"2025-11-11",
+  title:"Establishing the Canawayon Island protection zone",
+  sum:"Sample entry. Restricts extraction and clearing on the island that shields the poblacion from the open sea."},
+ {no:"Res. 2025-44", type:"Resolution", year:2025, date:"2025-10-07",
+  title:"Adopting the Annual Investment Program for fiscal year 2026",
+  sum:"Sample entry. The measure adopted each October alongside the executive budget."},
+ {no:"Ord. 2024-06", type:"Ordinance", year:2024, date:"2024-07-22",
+  title:"Municipal solid waste management ordinance",
+  sum:"Sample entry. Superseded in part by Ord. 2026-04. Kept in the archive with its status shown."},
+ {no:"Res. 2024-18", type:"Resolution", year:2024, date:"2024-05-15",
+  title:"Authorising the Mayor to enter into an agreement with the provincial government",
+  sum:"Sample entry."},
+ {no:"EO 2023-02", type:"Executive Order", year:2023, date:"2023-02-27",
+  title:"Reorganising the Municipal Disaster Risk Reduction and Management Council",
+  sum:"Sample entry."}
+];
+const ISSTYPES = ["All","Ordinance","Resolution","Executive Order","Advisory"];
+let issType = "All", issYear = "All";
+
+const PAGES = [["home","Home"],["services","Services"],["health","Health"],["livelihood","Farming & Fishing"],
+  ["storm","Storm & Emergency"],["away","Away from Home"],["visit","Visit Lapinig"],["contact","Contact"]];
+const PAGES2 = [["charter","Citizen's Charter"],["transparency","Transparency & FOI"],
+  ["officials","Officials & Offices"],["barangays","Barangays"],["issuances","Issuances"],
+  ["feedback","Feedback"],["about","About this site"]];
+const ALLPAGES = PAGES.concat(PAGES2);
+
+/* ---- Home masthead photograph ----------------------------------------
+   Leave both blank and the masthead stays a drawn graphic. No stock photo
+   of somewhere that is not Lapinig ever goes here.
+   To use a real photograph: put the file next to this page, then set
+   HERO_PHOTO to its file name and HERO_CREDIT to who took it and where.  */
+const HERO_PHOTO  = "";
+const HERO_CREDIT = "";
+(function(){
+  if(!HERO_PHOTO) return;
+  var a=document.getElementById('heroArt');
+  a.style.backgroundImage="linear-gradient(180deg,rgba(8,30,40,.74) 0%,rgba(8,30,40,.42) 45%,rgba(8,30,40,.82) 100%),url('"+HERO_PHOTO+"')";
+  a.style.backgroundSize="cover"; a.style.backgroundPosition="center";
+  document.getElementById('heroIsles').style.display='none';
+  document.getElementById('mhero').classList.add('photo');
+  document.getElementById('heroCap').textContent=HERO_CREDIT;
+})();
+
+let lastPage = "home";
+
+function buildNav(){
+  document.getElementById("nav").innerHTML = PAGES.map(([id,label]) =>
+    `<button onclick="go('${id}')" id="nav-${id}">${label}</button>`).join("");
+  document.getElementById("morelinks").innerHTML = PAGES2.map(([id,label]) =>
+    `<a href="#" onclick="go('${id}');return false;">${label}</a>`).join("");
+}
+function go(id){
+  if(id !== "detail") lastPage = id;
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("on"));
+  document.getElementById("p-"+id).classList.add("on");
+  ALLPAGES.forEach(([pid]) => {
+    const b = document.getElementById("nav-"+pid);
+    if(b) b.removeAttribute("aria-current");
+  });
+  const cur = document.getElementById("nav-"+id);
+  if(cur) cur.setAttribute("aria-current","page");
+  window.scrollTo({top:0,behavior:"instant"});
+}
+function goBack(){ go(lastPage); }
+
+function card(s){
+  return `<button class="svc" onclick="detail('${s.id}')">
+    <b>${s.name}</b>
+    <span class="alt">${s.wr ? s.wr : '<span class="tbc">Waray to be confirmed</span>'}</span>
+    <span class="meta">
+      <span class="pill office">${s.office}</span>
+      <span class="pill time">${s.time}</span>
+      <span class="pill fee">${s.fee}</span>
+    </span></button>`;
+}
+
+function detail(id){
+  const s = SERVICES.find(x => x.id === id);
+  document.getElementById("detail").innerHTML = `
+    <div class="detail-head">
+      <h2>${s.name}</h2>
+      <div class="alt">${s.wr ? s.wr : '<span class="tbc">Waray name to be confirmed</span>'}</div>
+    </div>
+    <dl class="facts">
+      <div class="fact"><dt>Office</dt><dd style="font-size:15px">${s.office}</dd></div>
+      <div class="fact"><dt>Fee</dt><dd>${s.fee}</dd></div>
+      <div class="fact"><dt>Processing time <span class="wr">Pira ka adlaw</span></dt><dd>${s.time}</dd></div>
+      <div class="fact"><dt>Classification</dt><dd style="font-size:15px">${s.cls}</dd></div>
+    </dl>
+    <div class="blockhead">What to bring <span class="wr">Ano an dadad-on</span></div>
+    <ul class="req">${s.req.map(r => `<li>${r}</li>`).join("")}</ul>
+    <div class="blockhead">Steps <span class="wr">Mga Pitad</span></div>
+    <ol class="steps">${s.steps.map(t => `<li>${t}</li>`).join("")}</ol>
+    <div class="note"><b>Good to know</b>${s.note}</div>
+    <p class="small" style="color:var(--ink-3);font-size:13px;">Last reviewed <span class="wr">Orhi nga gin-update</span>: sample date &middot; Responsible officer: sample name and position</p>`;
+  go("detail");
+}
+
+function match(term){
+  const t = term.toLowerCase().trim();
+  if(!t) return [];
+  return SERVICES.filter(s =>
+    (s.name + " " + (s.wr||"") + " " + s.alt + " " + s.tags + " " + s.office).toLowerCase().includes(t));
+}
+
+function wireSearch(inputId, targetId, blocksId){
+  const inp = document.getElementById(inputId);
+  inp.addEventListener("input", () => {
+    const hits = match(inp.value);
+    const target = document.getElementById(targetId);
+    if(blocksId){
+      document.getElementById(blocksId).style.display = inp.value.trim() ? "none" : "";
+    }
+    if(!inp.value.trim()){
+      target.innerHTML = blocksId ? "" : SERVICES.map(card).join("");
+      return;
+    }
+    target.innerHTML = hits.length
+      ? `<p class="hint" style="margin:14px 0 8px;">${hits.length} service${hits.length>1?"s":""} found</p>` + hits.map(card).join("")
+      : `<div class="nores" style="margin-top:14px;">Nothing found for "<strong>${inp.value}</strong>".<br>Try a simpler word, or <a href="#" onclick="openBot();return false;">ask a question</a>.</div>`;
+  });
+}
+
+/* ---------- assistant, grounded only in SERVICES ---------- */
+const CHIPS = ["Who is the mayor?","Who is the vice mayor?","Who are the councillors?",
+  "Permiso Pagnegosyo, ano an dadad-on?","How much is a cedula?",
+  "What do I need for a senior ID?","What are the office hours?","Where is the municipal hall?",
+  "Is there a storm?","Kon harayo ka, paano?","I want to make a complaint","When is the doctor here?",
+  "How do I register as a farmer?","Who is my barangay captain?","What is worth visiting in Lapinig?",
+  "Can you check my birth record?"];
+
+function botSay(html){
+  const log = document.getElementById("log");
+  log.insertAdjacentHTML("beforeend", `<div class="msg bot">${html}</div>`);
+  log.scrollTop = log.scrollHeight;
+}
+function meSay(text){
+  const log = document.getElementById("log");
+  log.insertAdjacentHTML("beforeend", `<div class="msg me">${escapeHtml(text)}</div>`);
+  log.scrollTop = log.scrollHeight;
+}
+function escapeHtml(s){ return s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+const PERSONAL = /\b(my|akon|aking|ako nga|check my|look up|status of my|record ko|my record|my application|my permit|my case)\b/i;
+
+function anyHit(q){
+  return new Set(match(q.replace(/[?.,]/g,""))
+    .concat(q.toLowerCase().split(/\s+/).flatMap(w => w.length > 3 ? match(w) : []))
+    .map(h => h.id)).size;
+}
+
+function answer(q){
+  const t = q.toLowerCase();
+  const srcOff = `<span class="src">Source: <a onclick="go('officials'); closeBot();">Officials and Offices page</a> &middot; elected officials for the 2025 to 2028 term.</span>`;
+
+  if(/(vice\s*mayor|bise\s*alkalde|bise-alkalde|pangalawang punong bayan)/.test(t))
+    return `The Vice Mayor of Lapinig is <strong>${OFFICIALS.vice}</strong>. She presides over the Sangguniang Bayan.${srcOff}`;
+
+  if(/\b(mayor|alkalde|punong bayan|sino ang mayor|meyor)\b/.test(t))
+    return `The Municipal Mayor of Lapinig is <strong>${OFFICIALS.mayor}</strong>.${srcOff}`;
+
+  if(/(council|konseh|sangguniang bayan|sb member|kagawad|councilor|councillor)/.test(t))
+    return `The eight members of the Sangguniang Bayan are:<br>${OFFICIALS.sb.map(n => "&bull; " + n).join("<br>")}<br><br>They are presided over by Vice Mayor ${OFFICIALS.vice}.${srcOff}`;
+
+  if(/(canawayon|island|isla|beach|dalampasigan|tourist|turista|visit|makita|puntahan|attraction|saan pupunta|what to see)/.test(t))
+    return `The best known place in Lapinig is <strong>Canawayon Island</strong>, just off the poblacion and visible from the municipal grounds. At low tide the crossing becomes shallow. It is the town's usual spot for picnics and camping, and it also shields the town from the open Pacific.<br><br>Also worth seeing: the seawall along the poblacion shore, the beach at Barangay Mabini, St. Bonaventure Parish Church, and the surviving old wooden houses in town.<span class="src">Source: <a onclick="go('visit'); closeBot();">Visit Lapinig page</a> &middot; ask at the municipal hall about tides and boats. There is no ticket office.</span>`;
+
+  if(/(farmer|farming|magsasaka|mangingisda|fisher|fishing|isda|niyog|coconut|copra|banca|bangka|boat|rsbsa|registry|ayuda|assistance|insurance|seguro|subsidy)/.test(t))
+    return `Most government assistance for farmers and fisherfolk is given out against a <strong>registry</strong>. If a household is not registered it usually receives nothing, however badly it is affected.<br><br>The registrations to ask about are municipal fisherfolk registration, boat registration, the farmer and farm worker registry, coconut farmer registration, and crop insurance. All of them go through the <strong>Municipal Agriculture Office</strong>, and registering is free.<br><br>Crop insurance in particular has a cut-off date each season. It has to be in place before the storm, not after.<span class="src">Source: <a onclick="go('livelihood'); closeBot();">Farming and fishing page</a> &middot; local schedules and requirements still to be confirmed.</span>`;
+
+  if(/(health|pankalusogan|panlawas|doktor|doctor|rhu|health unit|bakuna|immuni|prenatal|buntis|philhealth|konsulta|clinic|gamot|sakit)/.test(t))
+    return `The <strong>Rural Health Unit</strong> is the first point of care in Lapinig. It handles consultation, prenatal care, immunisation, family planning, the TB programme, senior and PWD check-ups, and writes hospital referrals.<br><br>Bring a valid ID, your PhilHealth number if you have one, and the child's immunisation card for anything involving a child. The weekly schedule and the visiting doctor's days are still to be confirmed by the Municipality.<br><br>In an emergency do not wait for a schedule. Go to the health unit or call <strong>911</strong>.<span class="src">Source: <a onclick="go('health'); closeBot();">Health services page</a></span>`;
+
+  if(/(barangay|brgy|kapitan|captain|punong|tanod|ilan ang barangay|which barangay)/.test(t) && !/clearance|certification/.test(t))
+    return `Lapinig has <strong>15 barangays</strong>: Alang-alang, Bagacay, Cahagwayan, Can Maria, Can Omanio, Imelda, Lapinig del Norte, Lapinig del Sur, Lo-ok, Mabini, May-igot, Palanas, Pio del Pilar, Potong and Potong del Sur. The two poblacion barangays are Lapinig del Norte and Lapinig del Sur.<br><br>Your barangay handles clearances, residency certifications, disputes between neighbours, and the evacuation for your area during a storm. The names of the punong barangay and their contact numbers are still to be confirmed.<span class="src">Source: <a onclick="go('barangays'); closeBot();">Barangays page</a></span>`;
+
+  if(/(abroad|ofw|overseas|dubai|saudi|manila|away|kamag-anak|harayo|representative|authoriz|authoris|padala|hindi ako nasa|wala ako sa|request from)/.test(t))
+    return `You do not have to be in Lapinig. A relative or friend can collect a local document for you with an authorisation letter, a copy of your ID and their own ID. There is a letter you can copy on the Away from Home page.<br><br>For a <strong>PSA</strong> birth, marriage or death certificate, order from the PSA directly rather than the municipal hall. If the document will be used in another country, it will usually also need a DFA apostille.<span class="src">Source: <a onclick="go('away'); closeBot();">For Lapinignons away from home</a></span>`;
+
+  if(/(complain|reklamo|feedback|fixer|bribe|lagay|suhol|report|hinihingian|extra fee|8888)/.test(t))
+    return `Take it first to the office named on the service page, then the Municipal Administrator, then the Office of the Mayor. You may also go straight to the <strong>8888 Citizens' Complaint Hotline</strong> or the <strong>Anti-Red Tape Authority</strong> at any time.<br><br>There should be no fee that is not published on the service page, and every payment comes with an official receipt. You can complain without giving your name.<span class="src">Source: <a onclick="go('feedback'); closeBot();">Feedback and complaints page</a> &middot; published under RA 11032.</span>`;
+
+  if(/(bagyo|storm|typhoon|weather|panahon|pahibaro|waray pasok|ibakwitan|bakwit|evacuat|lindol|flood|baha|advisory|signal|emergency)/.test(t))
+    return `Weather information for Lapinig comes from <strong>PAGASA</strong>, the national weather service, and the links are on the storm page. Suspension of classes or work is declared only by the Mayor and is posted at the top of the home page.<br><br>The storm page also holds the go-bag list, what to do before and after a storm, evacuation centres and who to call. The national emergency hotline is <strong>911</strong>.<span class="src">Source: <a onclick="go('storm'); closeBot();">Storm and emergency page</a> &middot; local numbers and evacuation centres are still to be confirmed by the Municipality.</span>`;
+
+  if(/(contact|kontaka|number|telepono|tawagan|hin-o an tatawagan|email|address|adres|saan ang munisipyo|where is the municipal|zip|postal)/.test(t))
+    return `The Municipal Hall is at the Poblacion, Lapinig, Northern Samar, postal code 6423. Office hours are 8:00 AM to 5:00 PM, Monday to Friday, with no noon break.<br><br>A telephone number and official email address are not yet published for this municipality. Until they are, the surest way to reach an office is to visit the municipal hall.<span class="src">Source: <a onclick="go('contact'); closeBot();">Contact page</a> &middot; the missing details are marked there as still to be confirmed.</span>`;
+
+  if(/(ano kaiha|pira ka adlaw|pira kaadlaw|kon pira it baraydan|ano an dadad|dadad-on|dadad on)/.test(t) && anyHit(q) === 0)
+    return `Every service page on this site shows three things together: <strong>what to bring</strong> (<em>Ano an dadad-on</em>), <strong>the fee</strong>, and <strong>how long it takes</strong> (<em>Pira ka adlaw</em>). Tell me which service and I will read them out.<br><br>By law a simple service must be finished in 3 working days, a complex one in 7, and a highly technical one in 20.<span class="src">Source: <a onclick="go('services'); closeBot();">Services page</a> &middot; processing limits under RA 11032.</span>`;
+
+  if(/(office hours|oras han opisina|abrido|sirado|anong oras|open|bukas|schedule ng opisina)/.test(t))
+    return `The municipal hall is open <strong>8:00 AM to 5:00 PM, Monday to Friday</strong>, with no noon break. The MDRRM Office operates 24 hours during a weather advisory.${srcOff}`;
+
+  if(PERSONAL.test(q) && /record|birth|permit|application|case|status|certificate/i.test(q)){
+    return `Waray ko kitaa an iya record o impormasyon. Poydi ko la igpahibaro ha imo an mga kinahanglanon hini nga serbisyo. Para han imo kalogaringon nga record o impormasyon kadtoa an opisina nga gin-ngararan ha <em>Services</em> nga tab.
+      <br><br>I cannot look up anyone's records, and I never will. I can only tell you what a service requires.
+      <span class="src">For your own record, please go to the office named on the service page, or call them. This assistant has no access to municipal records.</span>`;
+  }
+  const hits = match(q.replace(/[?.,]/g,""))
+    .concat(q.toLowerCase().split(/\s+/).flatMap(w => w.length > 3 ? match(w) : []));
+  const uniq = [...new Map(hits.map(h => [h.id,h])).values()];
+  if(uniq.length === 0){
+    return `I do not know the answer to that, and I will not guess.
+      <span class="src">Please call the Mayor's Office during office hours, 8:00 AM to 5:00 PM Monday to Friday, or visit the municipal hall at Lapinig del Norte. Contact number is a placeholder in this prototype.</span>`;
+  }
+  const s = uniq[0];
+  const more = uniq.length > 1
+    ? `<br><br>I also found: ${uniq.slice(1,4).map(x => `<a onclick="detail('${x.id}'); closeBot();">${x.name}</a>`).join(", ")}.`
+    : "";
+  return `<strong>${s.name}</strong><br>
+    Bring: ${s.req.join("; ")}.<br>
+    Fee: ${s.fee}. Processing time: ${s.time}. Office: ${s.office}.${more}
+    <span class="src">Source: <a onclick="detail('${s.id}'); closeBot();">${s.name} service page</a> &middot; a person reviews this information every six months.</span>`;
+}
+
+function ask(e){
+  e.preventDefault();
+  const inp = document.getElementById("qin");
+  const q = inp.value.trim();
+  if(!q) return;
+  meSay(q); inp.value = "";
+  setTimeout(() => botSay(answer(q)), 260);
+}
+function openBot(){
+  document.getElementById("panel").classList.add("on");
+  const log = document.getElementById("log");
+  if(!log.dataset.init){
+    botSay(`Maupay nga adlaw. Poydi ko igpahibaro ha imo kon pira it baraydan ngan kon pira kaadlaw it pagproseso hit bisan ano nga serbisyo nga ginhahatag hiton Munisipyo.
+      <br><br>Good day. I can tell you what to bring, what it costs, and how long it takes for any service of this municipality.
+      <span class="src">I answer only from this website's published service list. I cannot see anyone's records.</span>`);
+    document.getElementById("chips").innerHTML =
+      CHIPS.map(c => `<button onclick="quick(this)">${c}</button>`).join("");
+    log.dataset.init = "1";
+  }
+  setTimeout(() => document.getElementById("qin").focus(), 120);
+}
+function closeBot(){ document.getElementById("panel").classList.remove("on"); }
+function quick(b){
+  meSay(b.textContent);
+  setTimeout(() => botSay(answer(b.textContent)), 260);
+}
+
+function badgeClass(t){
+  if(t==="Executive Order") return "badge eo";
+  if(t==="Advisory") return "badge adv";
+  return "badge";
+}
+function renderIssuances(){
+  const q = (document.getElementById("issq").value || "").toLowerCase().trim();
+  const rows = ISSUANCES.filter(i =>
+    (issType==="All" || i.type===issType) &&
+    (issYear==="All" || String(i.year)===issYear) &&
+    (!q || (i.no+" "+i.title+" "+i.sum).toLowerCase().includes(q))
+  ).sort((a,b) => b.date.localeCompare(a.date));
+  document.getElementById("isscount").textContent =
+    rows.length + (rows.length===1 ? " issuance" : " issuances");
+  document.getElementById("isslist").innerHTML = rows.length
+    ? rows.map(i => `<div class="iss">
+        <span class="${badgeClass(i.type)}">${i.type}</span>
+        <div class="body">
+          <b>${i.title}</b>
+          <span class="no">${i.no} &middot; ${new Date(i.date+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"})}</span>
+          <p>${i.sum}</p>
+          <span class="dl">Download PDF (sample, no file attached)</span>
+        </div></div>`).join("")
+    : `<div class="nores">No issuance matches those filters.</div>`;
+}
+function buildIssuanceUI(){
+  document.getElementById("issfilters").innerHTML = ISSTYPES.map(t =>
+    `<button onclick="setIssType('${t}')" aria-pressed="${t===issType}" id="ift-${t.replace(/ /g,'')}">${t}</button>`).join("");
+  const years = ["All", ...[...new Set(ISSUANCES.map(i => i.year))].sort((a,b)=>b-a)];
+  document.getElementById("issyear").innerHTML = years.map(y => `<option>${y}</option>`).join("");
+  document.getElementById("issyear").addEventListener("change", e => { issYear = e.target.value; renderIssuances(); });
+  document.getElementById("issq").addEventListener("input", renderIssuances);
+  renderIssuances();
+}
+function setIssType(t){
+  issType = t;
+  ISSTYPES.forEach(x => {
+    const b = document.getElementById("ift-"+x.replace(/ /g,""));
+    if(b) b.setAttribute("aria-pressed", x===t);
+  });
+  renderIssuances();
+}
+
+buildNav();
+buildIssuanceUI();
+document.getElementById("newslist").innerHTML = NEWS.map(n => `<div class="post">
+  <b>${n.title}</b>
+  <div class="byline">By <strong>${n.author}</strong> &nbsp;·&nbsp; ${new Date(n.date+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"})} &nbsp;·&nbsp; Lapinig, Northern Samar</div>
+  <p>${n.sum}</p></div>`).join("");
+document.getElementById("alllist").innerHTML = SERVICES.map(card).join("");
+document.getElementById("offices").innerHTML = OFFICE_HEADS.map(([o,n]) =>
+  `<div class="r"><span class="n">${o}</span><span class="v" style="color:var(--gold);font-weight:600;">${n}</span></div>`).join("");
+document.getElementById("popular").innerHTML =
+  ["birth","bizr","senior","rpt","cedula"].map(id => card(SERVICES.find(s => s.id === id))).join("");
+wireSearch("q","results","homeblocks");
+wireSearch("q2","alllist",null);
+document.addEventListener("keydown", e => { if(e.key === "Escape") closeBot(); });
+</script>
+
+</body></html>
